@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Andira Sites">
+        <meta name="keywords" content="Ands Official">
+        <meta name="autor" content="Andira Official">
+		<title>Andira Official</title>
+		<link href='https://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style type="text/css">
+		* {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Quicksand"; margin: 0;
+        }
+		a {
+			text-decoration: none;
+		}
+		header h1 {
+			float: left; padding:10px 20px; font-size: 30px;
+		}
+		header h1 a {
+			transition: .3s;
+		}
+		header h1 a:hover {
+			color: #F84744;
+		}
+		header ul {
+			float: right;
+		}
+		header ul li {
+			padding: 24px; display: inline-block;
+		}
+		header ul li a {
+			transition: .3s;
+		}
+		header ul li a:hover {
+			color:gold; background-color: greenyellow;
+		}
+		.container {
+			width:90%; margin:0 auto;
+		}
+		.container::after {
+			content: ''; display: block; clear: both;
+		}
+		.container h2 {
+			font-size: 20px;
+		}
+		.mobile-menu {
+			float: right; display: none; padding: 33px;
+		}
+		.mobile-menu:hover {
+			cursor: pointer;
+		}
+		#check {
+			display: none;
+		}
+		.sidebar {
+			position: fixed; top: 0; bottom: 0; left: -200px; width: 200px; background-color:deepskyblue; transition: .3s;
+			z-index: 9999;
+		}
+		.sidebar ul li a {
+			color: #fff;
+		}
+		.sidebar ul li {
+			padding:24px; margin-left: -35px; transition: .3s;
+			transition-property: background-color;
+		}
+		.sidebar ul li:hover {
+			background-color:springgreen;
+		}
+		#check:checked ~ .sidebar {
+			left: 0;
+		}
+		
+		section h3::before {
+			content:''; display: block; position: absolute;
+			bottom: 0; width:120px; height:1px;
+			background-color: #ddd; left: calc(50% - 60px);
+		}
+		section h3::after {
+			content:''; display: block; position: absolute;
+			bottom: -1px; width:40px; height:4px; background-color: #F84744; left: calc(50% - 20px);
+		}
+		.container p {
+			text-align:center; font-size: 18px; line-height: 25px;margin-bottom: 15px;	
+		}
+		.clear {
+			clear: left;
+		}
+		
+		.ands-11 {
+			width:25%; box-sizing: border-box; padding:5px; float: left;
+			text-align: center; margin-bottom: 15px;
+		}
+		.slider{
+            overflow: hidden; height: auto;
+        }
+        .slider figure div{
+            width: 12%; float: left;
+        }
+        .slider figure img{
+            width: 100%; float: left;
+        }
+        .slider figure{
+            position: relative; width: 500%; margin: 0;
+            left: 0; animation: 50s slidy infinite;
+        }
+        @keyframes slidy{
+            0%{left: 0%} 10%{left: 0%;} 12%{left: -100%;} 
+			22%{left: -100%;} 24%{left: -200%;} 72%{left: -100%;}
+            82%{left: -100%;} 84%{left: -100%;} 94%{left: -100%;}
+            96%{left: 0%;} 100%{left: 0%;}
+        }
+		.ands-11 img {
+			width:100%;
+		}
+		.ands-11 a:hover img {
+			transform: scale(1.2); transition: 1s; color: brown;
+		}
+		a.tbl-biru {
+    		background-color:whitesmoke; border-radius: 5px; margin-top: 20px; padding: 10px 10px; color:blue; cursor: pointer;
+    		font-weight:lighter;
+		}
+		a.tbl-biru:hover {
+    		background-color:rgba(255,255,255, 0.6); text-decoration: none;
+		}
+		html {
+			scroll-behavior: smooth;
+		}
+		#myBtn {
+            display: none; position: fixed; bottom: 15px;
+            right: 30px; z-index: 1; font-size: 13px; border: none;
+            outline: none; background-color:mediumblue; color: white;
+            cursor: pointer; padding: 10px; border-radius: 30%;
+        }
+        #myBtn:hover {
+            background-color: #555;
+        }
+		@media (max-width: 640px){
+		.mobile-menu {
+			display: block;
+		}
+		header h1 {
+			font-size: 25px; padding: 15px 20px;
+		}
+		header ul {
+			display: none;
+		}
+		.container p {
+			font-size: 12px;
+		}
+		.ands-slider {
+			width: 478px; height: 250px;
+		}
+		.isi-slider img {
+			width: 478px; height: 250px;
+		}
+		.ands-11 {
+			width:50%;
+		}
+		.container h4, h5 {
+			font-size: 14px;
+		}
+		.container span {
+			font-size: 12px;
+		}
+	}
+	</style>
+	</head>
+	<body style="padding:0; margin:0; font-family: 'Quicksand', sans-serif; color: #333;">
+		<input type="checkbox" id="check">
+		<div class="sidebar">
+			<ul>
+				<li><a href="index.html"><i class="fa fa-home"></i> HOME</a></li>
+				<li><a href="cv.html"><i class="fa fa-briefcase"></i> PORTFOLIO</a></li>
+				<li><a href="andsblog.html"><i class="fa fa-globe"></i> BLOG</a></li>
+			</ul>
+		</div>
+		<header style=" width: 100%; height: 90px; background-color:lightskyblue; color:white; position: fixed; opacity: 90%; z-index: 10; top: 0;">
+			<div class="container">
+				<h1><a href="#">Andira Official</a></h1>
+				<ul style="float: right;">
+					<li><a href="index.html" class="tbl-biru"><i class="fa fa-home"></i> HOME</a></li>
+					<li><a href="cv.html" class="tbl-biru"><i class="fa fa-briefcase"></i> PORTFOLIO</a></li>
+					<li><a href="andsblog.html" class="tbl-biru"><i class="fa fa-globe"></i> BLOG</a></li>
+				</ul>
+				<label for="check" class="mobile-menu"><i class="fa fa-bars fa-2x"></i></label>
+			</div>
+			<div class="clear">
+
+			</div>
+		</header>
+		<section class="banner" style="text-align: center;">
+			<div class="container">
+				<div class="banner-left">
+					<img src="http://bit.ly/AndsProfil" style="width: 300px; border-radius: 3%; margin: 0 auto; padding-top: 100px;">
+					<h2 style="margin-bottom: 4px; color:brown">Welcome to My Website<br>
+						<span class="efek-ngetik" style="color:blue;"></span></h2>
+					<p style="color:tomato; font-size: 15px;">Be a Creative and Useful Person</p>
+				</div>
+			</div>
+		</section>
+		<div class="slider">
+            <p style="background-color:mediumslateblue; padding-top: 10px; padding-bottom: 2px; text-align: center; color:white ; font-size: 22px; border-radius: 5px;"><sup>GALERI PRESTASI</sup></p>
+            <figure>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-PEvgsJHIkg4/YG7gN7ECbOI/AAAAAAAAAGA/kl7c3Fj48F4nIftqd26LmDvpSaqYAq0OgCLcBGAsYHQ/s0/a.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-1PSynHIvwFQ/YG7g-9ANCEI/AAAAAAAAAGI/PqofQeAxigoJS9vlsgkC3YUZDVFDCFfNACLcBGAsYHQ/s0/b.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-euHOd6op4Nk/YG7hJ5dSFAI/AAAAAAAAAGM/Hn2D5KVYBfk9LlfgkfOFozvuMkP1CLhOACLcBGAsYHQ/s0/c.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-2hOTAQ0ntOk/YG7hVjILU5I/AAAAAAAAAGU/Ji6rMeNoQ4oLPnudYncWqr8xzxSg-rtXACLcBGAsYHQ/s0/d.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-9ZMLi9fn5S8/YG7h9eEmLzI/AAAAAAAAAGo/KpkWUPB-nKQK88S-PpwovKynieh2iea1ACLcBGAsYHQ/s0/g.jpg"></div>
+            </figure>
+        </div>
+		<section id="home" style="padding-bottom: 20px; text-align: center; margin:20px; position: relative;">
+			<div class="container">
+				<h4>HOME</h4>
+				<p>Mudahnya untuk menjangkau akses internet, bebas koneksi tanpa batas dan aturan, user generated-content dan kebebasan yang telah menjadi dasar setiap individu saat ini dan hal ini sangat menjadi perhatian khusus dan penting untuk disikapi agar tepat guna sehingga terjaga dari para pelaku cyber/pihak yang tidak bertanggung jawab dalam melakukan aksi penipuan dan pencurian data.</p>
+				<p>Be the best for your self. Selalu mawas dan jaga data pribadi kita agar lahirnya rasa nyaman dan aman dalam melakukan aktivitas online serta dalam menggunakan sosial media kita.</p>
+			</div>
+		</section>
+		<section id="pdp" style="padding-bottom: 20px; text-align: center; margin:20px; position: relative;">
+			<div class="container">
+				<h5>PROGRAM LANGUAGES TRAINING</h5>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-IuRFM3ioLHI/YGwKB14atpI/AAAAAAAAAE0/B4A-oYvhW-cJFchrXa34NjapidGS3ulDQCLcBGAsYHQ/s0/Sertifikat%2BHTML%2B%2526%2BCSS_Andira.png">
+						<span>HTML & CSS</span>
+					</a>
+				</div>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-IsrTzx4qoMk/YGwJhszJtVI/AAAAAAAAAEs/vRqVw1DhlXEgAYYQin3XD_p-ZDFBj1RKgCLcBGAsYHQ/s0/Sertifikat%2BJavaScript_Andira.png">
+						<span>JAVASCRIPT</span>
+					</a>
+				</div>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-et-BtXgx3fs/YHky4bkvbOI/AAAAAAAAAJo/lBZpl9CkubY0ZlzyUUKBVeGb89CCLMeywCLcBGAsYHQ/s0/Sertifikat%2BSass_Andira.png">
+						<span>SASS</span>
+					</a>
+				</div>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-BLlcL_hkt04/YGwKgyKoiAI/AAAAAAAAAFA/E4AbGjnnLUgY7Mn1_XpvoxqAHsfewvuPQCLcBGAsYHQ/s0/Sertifiat%2BGit_Andira.png">
+						<span>GIT</span>
+					</a>
+				</div>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-0k2S_WB66ps/YHkzDQl3_II/AAAAAAAAAJs/SIA4wx0zqhozVfVwBodAbKtAl0spcUy0gCLcBGAsYHQ/s0/Sertifikat%2BNode.js-Andira.png">
+						<span>NODE.JS</span>
+					</a>
+				</div>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-xX2aFAY_I4k/YHkzNeqYWnI/AAAAAAAAAJ0/4GsdUdiN8SARkpn7zi0ZdePtldpgPLnxQCLcBGAsYHQ/s0/Sertifikat%2BReact_Andira.png">
+						<span>REACT</span>
+					</a>
+				</div>
+				<div class="ands-11">
+					<a href="">
+						<img src="https://1.bp.blogspot.com/-JyYl9mW0zc4/YGwKUjxpNeI/AAAAAAAAAE8/J622fTFbN5wwEcvWDX2YpoqemrylhaNAgCLcBGAsYHQ/s0/Sertifiat%2BCommand%2BLine_Andira.png">
+						<span>COMMAND LINE</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section id="social-media" style="padding: 30px; text-align: center; font-size: 1em;">
+			<p>Follow My Social Media</p>
+				<a href="http://bit.ly/AndsFacebook" target="_blank">
+  					<i class="fa fa-facebook-official w3-hover-opacity"></i>
+				</a>
+				<a href="http://bit.ly/AndsInstagram" target="_blank">
+  					<i class="fa fa-instagram w3-hover-opacity"></i>
+				</a>
+				<a href="http://bit.ly/AndsTwitter" target="_blank">
+  					<i class="fa fa-twitter w3-hover-opacity"></i>
+				</a>
+		</section>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
+		<footer style="background-color:lightskyblue; padding: 30px; font-size: 15px; text-align: center;">
+			<div class="container">
+				<small style="color:white">Copyright &copy; 2021 - Andira Official</small>
+			</div>
+		</footer>
+		<script>
+			const txtElement = ['MAKE SURE THAT YOU GOT THE GREAT EXPLORATION HERE'];
+				let count = 0;
+				let txtIndex = 0;
+				let currentTxt = '';
+				let words = '';
+				(function ngetik(){
+				if(count == txtElement.length){
+				count = 0;
+			}
+			currentTxt = txtElement[count];
+			words = currentTxt.slice(0, ++txtIndex);
+			document.querySelector('.efek-ngetik').textContent = words;
+			if(words.length == currentTxt.length){
+				count++;
+				txtIndex = 0;
+			}
+			setTimeout(ngetik, 500);
+			})();
+			var mybutton = document.getElementById("myBtn");
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</body>
+</html>
