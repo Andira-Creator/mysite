@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Andira Blog">
+        <meta name="keywords" content="Ands Official">
+        <meta name="autor" content="Andira Official">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Andira Blog</title>
+		<link href='https://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/cba90e8547.js" crossorigin="anonymous"></script>
+		<style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            margin: 0; font-family: 'Buda';
+        }
+        .ands-text h1 {
+            font-size: 35px;
+        }
+        .ands-text p {
+            font-size: 15px;
+        }
+        .slider p {
+            font-size: 21px; 
+        }
+        #articles h1{
+            margin-left: 27%; margin-right: 27%; font-size: 20px;
+        }
+        #content h2 {
+            font-size: 16px; color:lime;
+        }
+        #content {
+            float: left; padding-right: 10px; padding-left: 10px; margin-left: 10px; margin-right: 3px; width: 32%; 
+            height: 300px; overflow: scroll; cursor: pointer;
+        }
+        #content img {
+            position: relative; width: 70%;
+        }
+
+        #content p {
+            position: relative; text-align: justify; width: 100%; font-size: 15px;
+        }
+        #clear {
+            clear: left;
+        }
+        .clear {
+            clear: left;
+        }
+        .center h3 {
+            font-size: 20px; color: blue;
+        }
+        .center p {
+            font-size: 13px;
+        }
+        .slider{
+            overflow: hidden; height: auto;
+        }
+        .slider figure div{
+            width: 10%; float: left;
+        }
+        .slider figure img{
+            width: 100%; float: left;
+        }
+        .slider figure{
+            position: relative; width: 500%; margin: 0; left: 0;
+            animation: 50s slidy infinite;
+        }
+        @keyframes slidy{
+            0%{left: 0%} 10%{left: 0%;} 12%{left: -100%;} 
+			22%{left: -100%;} 24%{left: -200%;} 72%{left: -100%;}
+            82%{left: -100%;} 84%{left: -100%;} 94%{left: -100%;}
+            96%{left: 0%;} 100%{left: 0%;}
+        }
+        #bio {
+            float: left; padding-right: 10px; padding-left: 10px;
+            margin-left: 5px; margin-right: 3px; width: 49%;
+        }
+        #bio img {
+            position: relative; width: 25%; border-radius: 5%;
+        }
+        #bio iframe {
+            width: 560px; height: 315px;
+        }
+        #bio li a {
+            transition: .3s;
+        }
+        #bio li a:hover {
+            color:greenyellow;
+        }
+        #myBtn {
+            display: none; position: fixed; bottom: 15px;
+            right: 30px; z-index: 1; font-size: 13px; border: none;
+            outline: none; background-color:rebeccapurple; color: white;
+            cursor: pointer; padding: 10px; border-radius: 30%;
+        }
+        #myBtn:hover {
+            background-color: #555;
+        }
+        .btn {
+            border-radius: 5px; padding: 10px;
+        }
+        @media all and (max-width: 1000px) {
+            .ands-text h1 {
+                font-size: 25px;
+            }
+            .ands-text p {
+                font-size: 13px;
+            }
+            .slider p {
+                font-size: 13px;
+            }
+            #articles h1 {
+                font-size: 13px; margin-left: 15%; margin-right: 15%;
+            }
+            #content h2 {
+                font-size: 14px;
+            }
+            #content {
+                width: 95%; margin-bottom: 8px; margin-right: 15px;
+                margin-left: 15px; height: 200px;
+            }
+            #bio iframe {
+                width: 500px; height: 315px;
+            }
+        }
+        @media all and (max-width: 640px) {
+            .ands-text h1 {
+                font-size: 20px;
+            }
+            .ands-text p {
+                font-size: 11px;
+            }
+            .slider p {
+                font-size: 13px;
+            }
+            #articles h1 {
+                font-size: 13px; margin-left: 15%; margin-right: 15%;
+            }
+            #content h2 {
+                font-size: 14px;
+            }
+            #content {
+                width: 95%; margin-bottom: 5px; margin-right: 15px;
+                margin-left: 15px; height: 200px;
+            }
+            #content p {
+                font-size: 11px;
+            }
+            .center h3 {
+                font-size: 12px;
+            }
+            .center p {
+                font-size: 11px;
+            }
+            .justify p{
+                font-size: 11px;
+            }
+            .justify a {
+                font-size: 11px;
+            }
+            center {
+                font-size: 11px;
+            }
+            #bio {
+                width: 95%; margin-bottom: 10px; margin-right: 15px;
+                margin-left: 10px;  
+            }
+            #bio iframe {
+                width: 250px; height: 215px;
+            }
+            #bio h4 {
+                font-size: 11px;
+            }
+            figcaption {
+                font-size: 11px;
+            }
+            #bio p {
+                font-size: 11px;
+            }
+            #bio li {
+                font-size: 11px;
+            }
+            summary {
+                font-size: 11px;
+            }
+            .btn {
+                padding: 5px;
+            }
+            footer {
+                font-size: 11px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="ands-top" style="margin-top: 5px; margin-bottom: 5px; padding-bottom: 3px; padding-top: 15px; position: relative; width: 100%;">
+            <div class="ands-media" style="text-align: center; font-size: 30px;">
+                <a href="http://bit.ly/AndsInstagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="http://bit.ly/AndsTwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://bit.ly/AndsFacebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="ands-text" style="text-align: center;">
+                <h1><span style="color:crimson">ANDIRA'S BLOG</span></h1>
+                <p style="color: blue">TUTORIAL-TIPS-LEARNING<br>
+                TECHNOLOGY-INSPIRATION-ACTIVITY</p>
+            </div>
+        </div>
+        <div class="slider">
+            <p style="background-color: coral; padding-top: 8px; padding-bottom: 2px; text-align: center; color:cornsilk; border-radius: 5px;"><sup>WELCOME TO MY BLOG AND GET THE BEST EXPLORATION</sup></p>
+            <figure>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-9ib7JVRNY-k/YG7iqmy80iI/AAAAAAAAAG4/CAjVIk0i53wHhJKgtCVRqIl7AVBeTndZACLcBGAsYHQ/s0/1.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-DnRgNpocmU8/YG7i0aweWjI/AAAAAAAAAG8/Rsd13MWuovg9gpbGP7gsyabltWjSTjWGACLcBGAsYHQ/s0/2.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-JejSGIA2-Bw/YG7i_EPrr3I/AAAAAAAAAHE/XoMFSDjKkRQNND7uZiP0ntDsLud1a3IhgCLcBGAsYHQ/s0/3.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-RmJWkgfOZ-o/YG7jIX4MRJI/AAAAAAAAAHM/16wCmo1oyk8lJn1q9K2ZQCLPzLnAI6saACLcBGAsYHQ/s0/4.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-zGj6nskL3OU/YG7jp8rutFI/AAAAAAAAAHk/-RmfwK12nxYFCPkHhITo5LJ_Pi7AXOJWwCLcBGAsYHQ/s0/5.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-yyziBvkerrk/YG7jy160wWI/AAAAAAAAAHs/teuyFRhYrpwMGH0nK1zmx-TGYTs4_VFtwCLcBGAsYHQ/s0/8.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-UGrmt9xyhHM/YG7jT7dxrNI/AAAAAAAAAHU/Zf_5zHwj0yA6imq4n06T4xyjc3aCTydxQCLcBGAsYHQ/s0/6.jpg"></div>
+                <div class="slide"><img src="https://1.bp.blogspot.com/-QJidEqczQUg/YG7jgtxfX8I/AAAAAAAAAHc/BBi61qi43sEQyE0MZIaGhaYOZ039iAUUQCLcBGAsYHQ/s0/7.jpg"></div>
+            </figure>
+            <div class="clear"></div>
+        </div>
+        <section id="articles">
+            <h1 style="text-align: center; border-style: double; border-radius: 5px; padding: 5px; background-color:mediumspringgreen; color: white; box-shadow: 0 4px orange; cursor: pointer;">Interactive Learning Management System<br>Digital Series</h1>
+            <article id="content">
+                <h2>Wakelet Platform<br>"Free Platform for Teacher. Everything in one Place"</h2>
+                <br>
+                <img src="https://1.bp.blogspot.com/-k90h2PM5XL8/YHHLiG6kkfI/AAAAAAAAAIQ/itxzk4nC_M8S-7jy4Ojm9vJwBJKPX9w4gCLcBGAsYHQ/s0/picturewakelet.png">
+                <p>Berkembangnya arus teknologi memberikan dampak yang positif untuk semua sektor kegiatan terutama di bidang pendidikan.
+                Lahirnya ide dan kreatifitas setiap individu telah memberikan dampak yang baik dalam memberikan kontribusi dalam menghadapi suatu permasalahan yang dihadapi terutama pada masa pandemi Covid-19 yang dihadapi oleh seluruh dunia saat ini.
+                <br>Disini saya ingin mengenalkan sebuah platform gratis yang memungkinkan anda membuat konten untuk disimpan dan dibagikan. nilai dan konten yang dapat dimuatkan di antaranya video, artikel, gambar, tweet, tautan dan bahkan anda bisa menambahkan teks anda sendiri disini. platform ini bernama Wakelet.<br>
+                Sebagai bagian dari upaya dan kreasi anda dalam membuat konten pembelajaran berbentuk visual, bisa anda muatkan di platform ini. untuk melihat referensi silahkan akses link yang ada di halaman terakhir di blog ini.<br>
+                Be a Creative..
+                </p>
+                <p><button class="button black" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i>Like</b></button></p>
+                <p class="clear"></p><br>
+            </article>
+            <article id="content">
+                <h2>BookWidgets Platform<br>"Create your own Interactive Exercises"</h2>
+                <br>
+                <img src="https://1.bp.blogspot.com/-MdkuO9NirYo/YHHK_8zvAjI/AAAAAAAAAII/nX2_PS3uNxcSFrTJwdkwMly1T4Wc5QK2ACLcBGAsYHQ/s0/picture%2Bbookwidgets.png">
+                <p>Pada artikel sebelumnya kita sedikit membahas tentang Wakelet platform. kali ini kita akan mengenal sebuah platform berbayar yang memiliki fitur-fitur kreatif untuk para guru dalam menyusun dan merancang konten pembelajaran dan juga model-model evaluasi yang akan disampaikan kepada peserta didik.
+                <br>Disini saya ingin mengenalkan beberapa fitur yang akan anda dapatkan sebagai pengguna platform ini.<br>
+                Fitur Tes dan Kajian yang terdiri dari Slip Keluar, Kartu Flash, Kuis, Papan Tulis Berbagi, Lini Masa, Web Quest, Lembar Kerja dan beberapa fitur lainnya. Kedua Fitur Permainan yang memungkinkan para pengguna untuk merancang sebuah permainan yang kreatif berdasarkan materi pembelajaran dan soal-soal lainnya. Fitur Permainan ini terdiri dari Kartu Bingo, Teka-teki silang, Peta Minda, Mencocokkan pasangan kartu dan fitur-fitur kreatif lainnya.
+                <br>Ketiga Fitur Gambar dan Video yang mengarahkan kepada sebuah konten pembelajaran dan penilaian berbasis gambar dan video. Pengguna bisa memilih berbagai fitur disini seperti Perbandingan gambar, Urutan Frame, Korsel gambar, Gambar Acak dan fitur-fitur keren lainnya yang dapat anda gunakan.
+                <br>Update terbaru dari platform ini memudahkan para pengguna untuk mempelajari dan menganalisa fitur-fitur untuk konten pembelajaran dan penilaian dengan mengaktifkan pilihan versi bahasa Indonesia.
+                <br> Tunggu apa lagi? mari berkreasi dan berikan karya terbaik anda.
+                <br>Be a Creative..
+                </p>
+                <p><button class="button black" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i>Like</b></button></p>
+                <p class="clear"></p><br>
+            </article>
+            <article id="content">
+                <h2>Google Platform<br>"Teach From Anywhere"</h2>
+                <br>
+                <img src="https://1.bp.blogspot.com/--GZA-8GhHWs/YHHLqfKQYRI/AAAAAAAAAIU/iEdTlz6skLgZiYhim-W9G7eg_4Kkrud3gCLcBGAsYHQ/s0/picturegoole.png">
+                <p>Semangat Berkarya..<br>
+                Lahirnya ide dan kreatifitas setiap individu telah memberikan dampak yang baik dalam memberikan kontribusi dalam menghadapi suatu permasalahan yang dihadapi terutama pada masa pandemi Covid-19 yang dihadapi oleh seluruh dunia saat ini.
+                <br>Sebelumya kita sudah mengenal secara umum platform-platform keren yang menjadi opsi pilihan khususnya para guru dalam membuat dan menyajikan konten pembelajaran dan penilaian yang disusun secara sistem digital.
+                <br>Disini saya yakin dan percaya bahwa semua sudah tahu dan sudah banyak yang menggunakan akses dan layanan google dalam membuat dan mengembangkan konten pembelajaran dan penilaian di masing-masing satuan kerjanya.
+                <br>Sedikit mengulas dan berbagi beberapa fitur dan referensi dari google khususnya dalam membuat sebuah konten kreatif baik untuk pembelajaran dan kegiatan pelatihan serta kegiatan lainnya. Diantara fitur yang paling banyak digunakan yaitu Google Form sebagai media membuat form untuk kegiatan pendaftaran, form untuk kuis dan soal dan masih banyak lagi kreasi serta pengembangan konten yang bisa dilakukan. Selanjutnya ada Google Sites atau GSites untuk membangun sebuah website kelas untuk peserta didik dan juga untuk promosi kegiatan usaha ataupun lainnya sesuai dengan kebutuhan masing-masing pengguna dalam mengaplikasi kreativitasnya.
+                <br>Menarik bukan? nah, kembali kepada setiap individu untuk mampu meningkatkan keterampilan mereka dalam mengembangkan kreatifitas dan konten sesuai dengan kebutuhan mereka masing-masing.
+                <br>Up your Skill and Be a Creative..
+                </p>
+                <p><button class="button black" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i>Like</b></button></p>
+                <p class="clear"></p><br>
+            </article>
+            <section id="clear"></section>
+        </section>
+        <div class="ands-contents" style="cursor:pointer;">
+            <div class="and-content" style="margin-top: 18px; padding: 0 auto; background-color: whitesmoke; height: 300px; overflow: scroll;">
+                <div class="center" style="text-align: center; margin: 20px 15px;">
+                    <h3>ASSISTANCING AND STRENGTHENING WORKSHOP</h3>
+                    <p>DIGITAL LITERACY AND INTERACTIVE LEARNING MANAGEMENT SYSTEM<span class="opacity">
+                    <br>14 Desember 2020</span></p>
+                    <hr>
+                </div>
+                <div class="justify" style="margin: 10px 10px; text-align: justify;">
+                    <center>
+                        <img src="https://1.bp.blogspot.com/-pJ6eWFCCHxo/YGwLbNVJ8jI/AAAAAAAAAFc/oNwJgXY51VQqe6NY23irv4efIy8-DIvZQCLcBGAsYHQ/s0/Picture%2B1.jpg" alt="Picture 1" style="width: 300px; border-radius: 2%;">
+                    </center>
+                    <p><strong>Assistancing and Strengthening Workshop</strong> Perkembangan arus teknologi menuntut setiap individu untuk lebih terampil dan aktif dalam menyesuaikan dan
+                    mengikuti perubahan yang dihadapi. Pandemi Covid-19 telah memberi arti yang berbeda bagi setiap individu dalam menyikapinya dan salah satu yang terdampak
+                    pada proses kegiatan dan pembelajaran di semua satuan pendidikan di Indonesia. Era saat ini, seluruh pendidik dituntut untuk meningkatkan keterampilan mereka dalam menyajikan materi pembelajaran.
+                    Berdasarkan beberapa referensi dan penelitian yang telah dilakukan, para pendidik telah melatih diri mereka melalui berbagai sistem kegiatan, baik secara individu atau mengikuti bimbingan dan 
+                    pelatihan teknis terkait konsep dan sistem pembelajaran berbasis digital untuk disampaikan kepada peserta didik dan orangtua.</p>
+                    <p>Kegiatan ini dilaksanakan di SMP Negeri 1 Mempura Kabupaten Siak Provinsi Riau.
+                        Sebagai individu yang yang diberikan kepercayaan dalam kegiatan pendampingan dan bagian dari suatu laporan kegiatan yang saya ikuti
+                        di tingkat <span>Kementerian Komunikasi dan Informatika RI</span> <span>Pandu Digital</span>. Materi pada kegiatan ini merupakan 
+                        kolaborasi materi pelatihan Kelas Online <span>ICT Watch Indonesia</span>. 
+                        Materi kegiatan terdiri dari Literasi Digital tentang urgensi perlindungan data pribadi dan penggunaan media sosial yang tepat serta Interactive Learning
+                        Management System dalam mengembangkan materi dan konten pembelajaran melalui <i>platform</i> BookWidgets, Google Classroom dan Canva.
+                        <hr>
+                        <center>
+                        Yuk, bagi yang ingin mengenal lebih dekat, kunjungi link berikut :
+                        <br>
+                        <a href="https://www.kominfo.go.id/" style="color: blue" target="_blank">Kementerian Komunikasi dan Informatika RI</a>
+                        <br>
+                        <a href="https://pandu.kominfo.go.id/" style="color:red" target="_blank">Pandu Digital</a>
+                        <br>
+                        <a href="https://belajar.ictwatch.id/" style="color:darkblue" target="_blank">ICT Watch Indonesia</a>
+                        <br>
+                        <i>Platform</i> <a href="https://www.bookwidgets.com/" style="color:salmon" target="_blank">BookWidgets,</a> <a href="https://classroom.google.com/h" style="color: salmon" target="_blank">Google Classroom</a> dan <a href="https://www.canva.com/" style="color:salmon" target="_blank">Canva.</a>
+                        </center>
+                    <hr>
+                    </p>
+                    <p style="text-align: center;"><button class="button black" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                    <p class="clear"></p><br>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <section id="bio-reference">
+            <figure id="bio">
+                <h4>ABOUT ME</h4>
+                <img src="https://1.bp.blogspot.com/-iufNP6szCts/YH0BTW-zzCI/AAAAAAAAAKQ/B0pNQ-vY-aY3uPF2PuV45shI7U3BUFwdQCLcBGAsYHQ/s0/IMG_20200924_140641-01-01.jpeg" alt="And Picture">
+                <figcaption>Just me, myself and I, exploring the universe of uknownment.
+                <br>I have a heart of love and a interest blog.
+                <br>I want to share my world with you.
+                <br>
+                <span style="color:blue"> Do and Give The Best For Your Self and Be a Creative</span><br></figcaption>
+                <figcaption>&copy; 2021 Digital Action</figcaption>
+            </figure>
+            <figure id="bio" style="cursor: pointer;"> 
+                <h4>REFERENCE</h4>
+                <p>View, Learn and Be a Creative</p>
+                <details>
+                    <summary>Wakelet Platform</summary>
+                    <ol type="A">
+                        <li><a href="https://wakelet.com/" target="_blank">Wakelet Website</a></li>
+                        <li><a href="https://wakelet.com/@Ands" target="_blank">Ands Wakelet Profile</a></li>
+                        <li><a href="Wakelet ebook - Indonesia (Latest).pdf" target="pdf_download">Tutorial User</a></p>
+                        <iframe name="pdf_download"></iframe></li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>BookWidgets Platform</summary>
+                    <ol type="A">
+                        <li><a href="https://www.bookwidgets.com/" target="_blank">BookWidgets Website</a></li>
+                        <li><a href="https://www.bookwidgets.com/play/cOkxrTIt-iQAEGSJyvAAAA/ECBTUET/white-board?teacher_id=4975839786565632" target="_blank">White Board Mode</a></li>
+                        <li><a href="https://www.bookwidgets.com/play/Ur6mersC-iQAEa0IxvAAAA/8CB7F88/survei-peserta?teacher_id=4975839786565632" target="_blank">Survey Form Mode</a></li>
+                        <li><a href="https://www.bookwidgets.com/play/-Aak4htp-iQAFs-MrPAAAA/3CCBD3F/fuzzle-time?teacher_id=4975839786565632" target="_blank">Fuzzle Mode</a></li>
+                        <li><a href="https://www.bookwidgets.com/play/4jXOqTFt-iQAFlfCrPAAAA/8CB7K84/post-test?teacher_id=4975839786565632" target="_blank">Quiz Form Mode</a></li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Google Platform</summary>
+                    <ol type="A">
+                        <li><a href="https://sites.google.com/view/anddigitalaction/beranda" target="_blank">GSites Mode</a></li>
+                        <li><a href="https://forms.gle/TjrZSeUP2wprZj7S9" target="_blank">Quiz Form Mode</a></li>
+                        <li><a href="https://classroom.google.com/c/MzEyMDU5MTIyMjE5" target="_blank">GClassroom Mode</a></li>
+                        <li><a href="https://forms.gle/mLndhFoMbAQFUfQz7" target="_blank">Registration Form Mode</a></li>
+                        <li><a href="https://forms.gle/mGKsCCU2DMtsBDHy8" target="_blank">List Attendence Mode</a></li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Ands Digital Blogspot.com</summary>
+                    <ol type="A">
+                        <li><a href="https://andsdigital.blogspot.com/2021/04/platform%20pembelajaran.html" target="_blank">Profile</a></li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>SurveyMonkey</summary>
+                    <ol type="A">
+                        <li><a href="https://www.surveymonkey.com/r/CCTG5YH" target="_blank">Mode of Conversation Quiz</a></li>
+                    </ol>
+                </details>
+            </figure>
+            <section id="clear"></section>
+        </section>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
+        <center>
+            <button class="btn"><a href="index.html" class="tbl-biru"><i class="fa fa-home"></i> HOME</a></button>
+          </center>
+        <footer style="background-color:gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px;">
+		    <div class="container">
+			    <small style="color:white">Copyright &copy; 2021 - Andira Official</small>
+		    </div>
+	    </footer>
+        <script>
+        function likeFunction(x) {
+            x.style.fontWeight = "normal";
+            x.innerHTML = "Thank you";
+        }
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+        }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+    </body>
+</html>
