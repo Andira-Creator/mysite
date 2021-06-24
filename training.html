@@ -1,413 +1,472 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Andira Training">
-    <meta name="keywords" content="Ands Official">
-    <meta name="autor" content="Andira Official">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Andira Training</title>
-    <link href='https://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<style type="text/css">
-    * {
-      box-sizing: border-box;
-    }
-    a {
-      text-decoration: none;
-    }
-    body {
-      background-color: #f1f1f1; padding: 20px;
-      font-family: 'Buda';
-    }
-    .main {
-      max-width: 1000px; margin: auto;
-    }
-    h1 {
-      font-size: 25px; word-break: break-all;
-    }
-    h2{
-      font-size: 15px;
-    }
-    h3 {
-      font-size: 13px;
-    }
-    p {
-      font-size: 12px;
-    }
-    img {
-      width: 100%;
-    }
-    .row {
-      margin: 12px -16px;
-    }
-    .row,
-    .row > .column {
-      padding: 8px;
-    }
-    .column {
-      float: left; width: 25%; display: none;
-    }
-    .row:after {
-      content: ""; display: table; clear: both;
-    }
-    .content {
-      background-color: white; padding: 10px;
-    }
-    .show {
-      display: block;
-    }
-    .btn {
-      border: none; outline: none; padding: 12px 16px;
-      background-color: white; cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #ddd;
-    }
-    .btn.active {
-      background-color: rgb(194, 122, 122); color: white;
-    }
-    #myBtn {
-      display: none; position: fixed; bottom: 15px;
-      right: 30px; z-index: 1; font-size: 13px; border: none;
-      outline: none; background-color:seagreen; color: white;
-      cursor: pointer; padding: 10px; border-radius: 30%;
-    }
-    #myBtn:hover {
-      background-color: #555;
-    }
-
-    /* responsive */
-    @media screen and (max-width: 400px) {
-      h1 {
-      font-size: 18px;
+    <meta charset="utf-8" />
+    <meta name="description" content="Andira Training" />
+    <meta name="keywords" content="Ands Official" />
+    <meta name="autor" content="Andira Official" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andira | CAT</title>
+    <link href="https://fonts.googleapis.com/css?family=Buda:300" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
       }
-      h2{
-        font-size: 13px;
+      a {
+        text-decoration: none;
+      }
+      body {
+        background-color: #f1f1f1;
+        padding: 20px;
+        font-family: "Buda";
+      }
+      .main {
+        max-width: 1000px;
+        margin: auto;
+      }
+      h1 {
+        font-size: 25px;
+        word-break: break-all;
+      }
+      h2 {
+        font-size: 15px;
       }
       h3 {
-        font-size: 11px;
+        font-size: 13px;
       }
       p {
-        font-size: 10px;
+        font-size: 12px;
+      }
+      img {
+        width: 100%;
+      }
+      .row {
+        margin: 12px -16px;
+      }
+      .row,
+      .row > .column {
+        padding: 8px;
       }
       .column {
-        width: 50%;
+        float: left;
+        width: 25%;
+        display: none;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .content {
+        background-color: white;
+        padding: 10px;
+      }
+      .show {
+        display: block;
       }
       .btn {
-        padding: 5px;
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: white;
+        cursor: pointer;
       }
-    }
+      .btn:hover {
+        background-color: #ddd;
+      }
+      .btn.active {
+        background-color: rgb(194, 122, 122);
+        color: white;
+      }
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        z-index: 1;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: seagreen;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 30%;
+      }
+      #myBtn:hover {
+        background-color: #555;
+      }
+      @media screen and (max-width: 400px) {
+        h1 {
+          font-size: 18px;
+        }
+        h2 {
+          font-size: 13px;
+        }
+        h3 {
+          font-size: 11px;
+        }
+        p {
+          font-size: 10px;
+        }
+        .column {
+          width: 50%;
+        }
+        .btn {
+          padding: 5px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="main">
       <h1>COMPETENCY AND TRAINING</h1>
-      <hr>
+      <hr />
       <h2>PORTFOLIO</h2>
       <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('program')"> Programming</button>
-        <button class="btn" onclick="filterSelection('outlocal')"> International Events</button>
-        <button class="btn" onclick="filterSelection('inline')"> National Events</button>
+        <button class="btn active" onclick="filterSelection('all')">Show all</button>
+        <button class="btn" onclick="filterSelection('program')">Programming</button>
+        <button class="btn" onclick="filterSelection('outlocal')">International Events</button>
+        <button class="btn" onclick="filterSelection('inline')">National Events</button>
       </div>
       <div class="row">
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-ZqzGWbkItPY/YIg08M-k7MI/AAAAAAAAANI/nkY6fHmOjhMqHNe866F5BKM7M2-kBx9qACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_001.png" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-ZqzGWbkItPY/YIg08M-k7MI/AAAAAAAAANI/nkY6fHmOjhMqHNe866F5BKM7M2-kBx9qACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_001.png" alt="Certificate" />
             <h3>Certificate of Completion</h3>
-            <p>Digitalent Scholarship PROA<br>
-            Ministry of Communication and Informatics<br>
-            Republic of Indonesia<br>2021</p>
+            <p>
+              Digitalent Scholarship PROA<br />
+              Ministry of Communication and Informatics<br />
+              Republic of Indonesia<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-IuRFM3ioLHI/YGwKB14atpI/AAAAAAAAAE0/B4A-oYvhW-cJFchrXa34NjapidGS3ulDQCLcBGAsYHQ/s0/Sertifikat%2BHTML%2B%2526%2BCSS_Andira.png" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-IuRFM3ioLHI/YGwKB14atpI/AAAAAAAAAE0/B4A-oYvhW-cJFchrXa34NjapidGS3ulDQCLcBGAsYHQ/s0/Sertifikat%2BHTML%2B%2526%2BCSS_Andira.png" alt="Certificate" />
             <h3>HTML & CSS</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-IsrTzx4qoMk/YGwJhszJtVI/AAAAAAAAAEs/vRqVw1DhlXEgAYYQin3XD_p-ZDFBj1RKgCLcBGAsYHQ/s0/Sertifikat%2BJavaScript_Andira.png">
+            <img src="https://1.bp.blogspot.com/-IsrTzx4qoMk/YGwJhszJtVI/AAAAAAAAAEs/vRqVw1DhlXEgAYYQin3XD_p-ZDFBj1RKgCLcBGAsYHQ/s0/Sertifikat%2BJavaScript_Andira.png" />
             <h3>Java Script</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-0k2S_WB66ps/YHkzDQl3_II/AAAAAAAAAJs/SIA4wx0zqhozVfVwBodAbKtAl0spcUy0gCLcBGAsYHQ/s0/Sertifikat%2BNode.js-Andira.png">
-            <h3>Node.JS</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <img src="https://1.bp.blogspot.com/-0k2S_WB66ps/YHkzDQl3_II/AAAAAAAAAJs/SIA4wx0zqhozVfVwBodAbKtAl0spcUy0gCLcBGAsYHQ/s0/Sertifikat%2BNode.js-Andira.png" />
+            <h3>Node.js</h3>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-xX2aFAY_I4k/YHkzNeqYWnI/AAAAAAAAAJ0/4GsdUdiN8SARkpn7zi0ZdePtldpgPLnxQCLcBGAsYHQ/s0/Sertifikat%2BReact_Andira.png">
+            <img src="https://1.bp.blogspot.com/-xX2aFAY_I4k/YHkzNeqYWnI/AAAAAAAAAJ0/4GsdUdiN8SARkpn7zi0ZdePtldpgPLnxQCLcBGAsYHQ/s0/Sertifikat%2BReact_Andira.png" />
             <h3>React</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-et-BtXgx3fs/YHky4bkvbOI/AAAAAAAAAJo/lBZpl9CkubY0ZlzyUUKBVeGb89CCLMeywCLcBGAsYHQ/s0/Sertifikat%2BSass_Andira.png">
+            <img src="https://1.bp.blogspot.com/-et-BtXgx3fs/YHky4bkvbOI/AAAAAAAAAJo/lBZpl9CkubY0ZlzyUUKBVeGb89CCLMeywCLcBGAsYHQ/s0/Sertifikat%2BSass_Andira.png" />
             <h3>Sass</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-JyYl9mW0zc4/YGwKUjxpNeI/AAAAAAAAAE8/J622fTFbN5wwEcvWDX2YpoqemrylhaNAgCLcBGAsYHQ/s0/Sertifiat%2BCommand%2BLine_Andira.png">
+            <img src="https://1.bp.blogspot.com/-JyYl9mW0zc4/YGwKUjxpNeI/AAAAAAAAAE8/J622fTFbN5wwEcvWDX2YpoqemrylhaNAgCLcBGAsYHQ/s0/Sertifiat%2BCommand%2BLine_Andira.png" />
             <h3>Command Line</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column program">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-BLlcL_hkt04/YGwKgyKoiAI/AAAAAAAAAFA/E4AbGjnnLUgY7Mn1_XpvoxqAHsfewvuPQCLcBGAsYHQ/s0/Sertifiat%2BGit_Andira.png">
+            <img src="https://1.bp.blogspot.com/-BLlcL_hkt04/YGwKgyKoiAI/AAAAAAAAAFA/E4AbGjnnLUgY7Mn1_XpvoxqAHsfewvuPQCLcBGAsYHQ/s0/Sertifiat%2BGit_Andira.png" />
             <h3>Git</h3>
-            <p>DTS PROA <br>Ministry of Communication and Informatics<br>
-            Progate<br>2021</p>
+            <p>
+              DTS PROA <br />Ministry of Communication and Informatics<br />
+              Progate<br />2021
+            </p>
           </div>
         </div>
         <div class="column outlocal">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-FW5b8QCm4ZM/YINfSUFdX9I/AAAAAAAAALQ/JzpQ6RlZWm4INl1D8w1rQW53RV7DnwfNQCLcBGAsYHQ/s0/Certificate_%2BTop%2Btips%2Band%2Btricks%2Bfor%2Busing%2BWakelet%2Bin%2Bthe%2Bclassroom_001" alt="Certificate">
+            <img
+              src="https://1.bp.blogspot.com/-FW5b8QCm4ZM/YINfSUFdX9I/AAAAAAAAALQ/JzpQ6RlZWm4INl1D8w1rQW53RV7DnwfNQCLcBGAsYHQ/s0/Certificate_%2BTop%2Btips%2Band%2Btricks%2Bfor%2Busing%2BWakelet%2Bin%2Bthe%2Bclassroom_001"
+              alt="Certificate"
+            />
             <h3>International Event</h3>
-            <p>Wakelet and Community<br>2021</p>
+            <p>Wakelet and Community<br />2021</p>
           </div>
         </div>
         <div class="column outlocal">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-JwU0RueIokw/YINfSYo7gBI/AAAAAAAAALY/sSZJiKIjbXoJotuM_YnC-nuEkfNkUdTFgCLcBGAsYHQ/s0/Wakelet%2BCommunity%2BSpecial%2BWebinar%2B-%2B%2BTech%2BCoach%2BSpecial%2521_001.jpg" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-JwU0RueIokw/YINfSYo7gBI/AAAAAAAAALY/sSZJiKIjbXoJotuM_YnC-nuEkfNkUdTFgCLcBGAsYHQ/s0/Wakelet%2BCommunity%2BSpecial%2BWebinar%2B-%2B%2BTech%2BCoach%2BSpecial%2521_001.jpg" alt="Certificate" />
             <h3>International Event</h3>
-            <p>Wakelet and Community<br>2021</p>
+            <p>Wakelet and Community<br />2021</p>
           </div>
         </div>
         <div class="column outlocal">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-8QblNnixeqY/YINfSQqjv3I/AAAAAAAAALU/uy5iBw9DA5kRxFX01DuAZR7M19iUc1UzQCLcBGAsYHQ/s0/2.%2B17%2BNovember%2B2020.jpg
-            " alt="Certificate">
+            <img
+              src="https://1.bp.blogspot.com/-8QblNnixeqY/YINfSQqjv3I/AAAAAAAAALU/uy5iBw9DA5kRxFX01DuAZR7M19iUc1UzQCLcBGAsYHQ/s0/2.%2B17%2BNovember%2B2020.jpg
+            "
+              alt="Certificate"
+            />
             <h3>International Webinar</h3>
-            <p>National Population and Family Planning Board of the Republic of Indonesia<br>2020</p>
+            <p>National Population and Family Planning Board of the Republic of Indonesia<br />2020</p>
           </div>
         </div>
         <div class="column outlocal">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-6_PSJ0ybK4o/YINfTTys_nI/AAAAAAAAALc/yIM4Y8iXqKMStqX_cBeRpEKXELSmWEyzwCLcBGAsYHQ/s0/international1.jpg" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-6_PSJ0ybK4o/YINfTTys_nI/AAAAAAAAALc/yIM4Y8iXqKMStqX_cBeRpEKXELSmWEyzwCLcBGAsYHQ/s0/international1.jpg" alt="Certificate" />
             <h3>International Webinar</h3>
-            <p>Ministry of Women's Empowerment and Child Protection Program<br>2020</p>
+            <p>Ministry of Women's Empowerment and Child Protection Program<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-8onECtAPLsA/YGwKxxuIkDI/AAAAAAAAAFI/8B8YlwFN-UQo45ZqIT9jw9Mqq8RWm8gHwCLcBGAsYHQ/s0/sertifikat_Pandu%2BDigital_Andira.jpg" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-8onECtAPLsA/YGwKxxuIkDI/AAAAAAAAAFI/8B8YlwFN-UQo45ZqIT9jw9Mqq8RWm8gHwCLcBGAsYHQ/s0/sertifikat_Pandu%2BDigital_Andira.jpg" alt="Certificate" />
             <h3>Pandu Digital</h3>
-            <p>Ministry of Communication and Informatics<br>2020</p>
+            <p>Ministry of Communication and Informatics<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-rQzVagZJmlw/YGwLCQ0ty_I/AAAAAAAAAFQ/fhB-tclzToID4JlGW3RpcY_eGHFdB17lgCLcBGAsYHQ/s0/Certificate_Fundamental%2BDigital%2BLiteracy_Andira.jpg" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-rQzVagZJmlw/YGwLCQ0ty_I/AAAAAAAAAFQ/fhB-tclzToID4JlGW3RpcY_eGHFdB17lgCLcBGAsYHQ/s0/Certificate_Fundamental%2BDigital%2BLiteracy_Andira.jpg" alt="Certificate" />
             <h3>Digital Literacy Fundamental</h3>
-            <p>Indonesia ICT Watch<br>2020</p>
+            <p>Indonesia ICT Watch<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-jjSprajNetE/YGwLNriHJJI/AAAAAAAAAFU/B4GTzhyiqfY2o7RymRLnvxD_wkY-L1WyQCLcBGAsYHQ/s0/Certificate_UMKM%2BDigital%2BLearning_Andira.jpg" alt="Certificate">
+            <img src="https://1.bp.blogspot.com/-jjSprajNetE/YGwLNriHJJI/AAAAAAAAAFU/B4GTzhyiqfY2o7RymRLnvxD_wkY-L1WyQCLcBGAsYHQ/s0/Certificate_UMKM%2BDigital%2BLearning_Andira.jpg" alt="Certificate" />
             <h3>UMKM BEJO</h3>
-            <p>Indonesia ICT Watch<br>2020</p>
+            <p>Indonesia ICT Watch<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-yZ_il21JvMA/YINcgsd7oII/AAAAAAAAAKo/Ayj_fnH4hvAi7HAP5museYeLcGrIPv1OgCLcBGAsYHQ/s16000/Kelas%2BBahasa%2BInggris_001.jpg
-            ">
+            <img
+              src="https://1.bp.blogspot.com/-yZ_il21JvMA/YINcgsd7oII/AAAAAAAAAKo/Ayj_fnH4hvAi7HAP5museYeLcGrIPv1OgCLcBGAsYHQ/s16000/Kelas%2BBahasa%2BInggris_001.jpg
+            "
+            />
             <h3>English Training</h3>
-            <p>Prakerja Program<br>2020</p>
+            <p>Prakerja Program<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-qgU-v_KkjWw/YGwUUt2ltpI/AAAAAAAAAFs/t22RX6aJsEQx6tYzlNuGn47YFysz4aRlQCLcBGAsYHQ/s16000/e-certificate_Kelas%2BBahasa%2BInggris%2BPresentasi_Agus%2BAndira_001.jpg">
+            <img src="https://1.bp.blogspot.com/-qgU-v_KkjWw/YGwUUt2ltpI/AAAAAAAAAFs/t22RX6aJsEQx6tYzlNuGn47YFysz4aRlQCLcBGAsYHQ/s16000/e-certificate_Kelas%2BBahasa%2BInggris%2BPresentasi_Agus%2BAndira_001.jpg" />
             <h3>English Presentation</h3>
-            <p>Prakerja Program<br>2020</p>
+            <p>Prakerja Program<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-Phndb3aiKV8/YINcgmGn9lI/AAAAAAAAAKs/TBQ0uTlkWdEtAusAGffZcrcbYNwF3IrEwCLcBGAsYHQ/s16000/Sertifikat_Kiat%2BBelajar%2BSkill%2BBahasa%2BInggris%2Buntuk%2BMeningkatkan%2BKarir_Agus%2BAndira_001.jpg
-            ">
+            <img
+              src="https://1.bp.blogspot.com/-Phndb3aiKV8/YINcgmGn9lI/AAAAAAAAAKs/TBQ0uTlkWdEtAusAGffZcrcbYNwF3IrEwCLcBGAsYHQ/s16000/Sertifikat_Kiat%2BBelajar%2BSkill%2BBahasa%2BInggris%2Buntuk%2BMeningkatkan%2BKarir_Agus%2BAndira_001.jpg
+            "
+            />
             <h3>English Training</h3>
-            <p>Prakerja Program<br>2020</p>
+            <p>Prakerja Program<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-UuDjXJhPECg/YINccCv26qI/AAAAAAAAAKk/QEdEJnoLH3khTK2HzapeXiJLeBbVv95RgCLcBGAsYHQ/s2048/E-Certificate_Akuntansi%2BAccurate_Andira_001.jpg">
+            <img src="https://1.bp.blogspot.com/-UuDjXJhPECg/YINccCv26qI/AAAAAAAAAKk/QEdEJnoLH3khTK2HzapeXiJLeBbVv95RgCLcBGAsYHQ/s2048/E-Certificate_Akuntansi%2BAccurate_Andira_001.jpg" />
             <h3>Akuntansi Accurate</h3>
-            <p>Prakerja Program<br>2020</p>
+            <p>Prakerja Program<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-keUXgFiubfQ/YINcgnjuO1I/AAAAAAAAAKw/h6aFrWSYngU0ANyJTUK6tvAPKpJQ6MopACLcBGAsYHQ/s16000/e-certificate_Analisa%2BGoogle%2BAdds_Andira_001.jpg">
+            <img src="https://1.bp.blogspot.com/-keUXgFiubfQ/YINcgnjuO1I/AAAAAAAAAKw/h6aFrWSYngU0ANyJTUK6tvAPKpJQ6MopACLcBGAsYHQ/s16000/e-certificate_Analisa%2BGoogle%2BAdds_Andira_001.jpg" />
             <h3>Google Analytics</h3>
-            <p>Prakerja Program<br>2020</p>
+            <p>Prakerja Program<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-cGVvDjV_QyA/YINnTRaoM_I/AAAAAAAAALs/SBrcu_lrQnYNgtailToIDua5xAVWunkMQCLcBGAsYHQ/s0/1.%2B14%2BOktober%2B2020.jpg">
+            <img src="https://1.bp.blogspot.com/-cGVvDjV_QyA/YINnTRaoM_I/AAAAAAAAALs/SBrcu_lrQnYNgtailToIDua5xAVWunkMQCLcBGAsYHQ/s0/1.%2B14%2BOktober%2B2020.jpg" />
             <h3>National Seminar</h3>
-            <p>Ministry of Industry<br>2020</p>
+            <p>Ministry of Industry<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-WVcaRATrwzY/YINnTZ6Mo4I/AAAAAAAAALw/V_VjeK5NcKwbyiZ53Nd4rKbuxRSMpMB_QCLcBGAsYHQ/s0/1.%2B15%2BOktober%2B2020.jpg">
+            <img src="https://1.bp.blogspot.com/-WVcaRATrwzY/YINnTZ6Mo4I/AAAAAAAAALw/V_VjeK5NcKwbyiZ53Nd4rKbuxRSMpMB_QCLcBGAsYHQ/s0/1.%2B15%2BOktober%2B2020.jpg" />
             <h3>National Seminar</h3>
-            <p>Ministry of Industry<br>2020</p>
+            <p>Ministry of Industry<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-KJRTYGRJUD0/YINnTdd4b9I/AAAAAAAAAL0/tCt063er1n8xwtERIOewmtizL-ffNdoLwCLcBGAsYHQ/s0/1.%2B22%2BOktober%2B2020.jpg">
+            <img src="https://1.bp.blogspot.com/-KJRTYGRJUD0/YINnTdd4b9I/AAAAAAAAAL0/tCt063er1n8xwtERIOewmtizL-ffNdoLwCLcBGAsYHQ/s0/1.%2B22%2BOktober%2B2020.jpg" />
             <h3>National Seminar</h3>
-            <p>Ministry of Communication and Informatics<br>2020</p>
+            <p>Ministry of Communication and Informatics<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-uR928cOpVJ8/YINnUfoMT9I/AAAAAAAAAL4/2jKBRqrzE4QBx9teziHReXk2HkbJ5TrIgCLcBGAsYHQ/s0/1.%2B26%2BOktober%2B2020.jpg
-            ">
+            <img
+              src="https://1.bp.blogspot.com/-uR928cOpVJ8/YINnUfoMT9I/AAAAAAAAAL4/2jKBRqrzE4QBx9teziHReXk2HkbJ5TrIgCLcBGAsYHQ/s0/1.%2B26%2BOktober%2B2020.jpg
+            "
+            />
             <h3>National Seminar</h3>
-            <p>Ministry of National Development Planning<br>2020</p>
+            <p>Ministry of National Development Planning<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-S4-C0-Zv9tI/YINnUkzy_KI/AAAAAAAAAL8/-veqyxaU9C0Wlmw3pfVNi_3e8uL3N0xTwCLcBGAsYHQ/s0/2.%2B02%2BNovember%2B2020.jpg
-            ">
+            <img
+              src="https://1.bp.blogspot.com/-S4-C0-Zv9tI/YINnUkzy_KI/AAAAAAAAAL8/-veqyxaU9C0Wlmw3pfVNi_3e8uL3N0xTwCLcBGAsYHQ/s0/2.%2B02%2BNovember%2B2020.jpg
+            "
+            />
             <h3>Online Solutive Discussion</h3>
-            <p>Ministry of Industry<br>2020</p>
+            <p>Ministry of Industry<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-RkNQp_Vrqa0/YINnUmirQVI/AAAAAAAAAMA/bWj0t1WNnsMekLBEaIXIcnCbbxuvPOMIACLcBGAsYHQ/s0/2.%2B05%2BNovember%2B2020.jpg">
+            <img src="https://1.bp.blogspot.com/-RkNQp_Vrqa0/YINnUmirQVI/AAAAAAAAAMA/bWj0t1WNnsMekLBEaIXIcnCbbxuvPOMIACLcBGAsYHQ/s0/2.%2B05%2BNovember%2B2020.jpg" />
             <h3>National Seminar</h3>
-            <p>Ministry of Communication and Informatics<br>2020</p>
+            <p>Ministry of Communication and Informatics<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-rhhwPhmLOCk/YINnVB3F-4I/AAAAAAAAAME/vyTC0KBrDw8ZQcTYZemtbnVqenVsfBIewCLcBGAsYHQ/s0/2.%2B12%2BNovember%2B2020.jpg">
+            <img src="https://1.bp.blogspot.com/-rhhwPhmLOCk/YINnVB3F-4I/AAAAAAAAAME/vyTC0KBrDw8ZQcTYZemtbnVqenVsfBIewCLcBGAsYHQ/s0/2.%2B12%2BNovember%2B2020.jpg" />
             <h3>National Seminar</h3>
-            <p>National Consulting and Development Institute<br>2020</p>
+            <p>National Consulting and Development Institute<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-1Vkmc55Rj90/YINnXseTrrI/AAAAAAAAAMc/ErBJANpKbiQpdi3QXm_DzjafU27_eBzQACLcBGAsYHQ/s0/certificate%2Bvolunteer_Andi_001.jpg">
+            <img src="https://1.bp.blogspot.com/-1Vkmc55Rj90/YINnXseTrrI/AAAAAAAAAMc/ErBJANpKbiQpdi3QXm_DzjafU27_eBzQACLcBGAsYHQ/s0/certificate%2Bvolunteer_Andi_001.jpg" />
             <h3>Volunteering Exam</h3>
-            <p>Indonesia Volunteering Hub<br>2020</p>
+            <p>Indonesia Volunteering Hub<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-3C_QyewT180/YINnXCXL7nI/AAAAAAAAAMY/gnI2FmGSEVI_RsoqjDaDUhZFBmoNu_CDACLcBGAsYHQ/s0/Certificate_Digital%2BPrivacy_Andira_001.jpg
-            ">
+            <img
+              src="https://1.bp.blogspot.com/-3C_QyewT180/YINnXCXL7nI/AAAAAAAAAMY/gnI2FmGSEVI_RsoqjDaDUhZFBmoNu_CDACLcBGAsYHQ/s0/Certificate_Digital%2BPrivacy_Andira_001.jpg
+            "
+            />
             <h3>National Seminar</h3>
-            <p>Indonesia ICT Watch<br>2020</p>
+            <p>Indonesia ICT Watch<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-nJp9TOT38nc/YINnXy8vOJI/AAAAAAAAAMg/ygx2NcBrrZomZvp0XfBp8_PchM8MrJolACLcBGAsYHQ/s0/e%2Bcertificate_Research%2BTalk%2BSeries2_Andira_001.jpg">
+            <img src="https://1.bp.blogspot.com/-nJp9TOT38nc/YINnXy8vOJI/AAAAAAAAAMg/ygx2NcBrrZomZvp0XfBp8_PchM8MrJolACLcBGAsYHQ/s0/e%2Bcertificate_Research%2BTalk%2BSeries2_Andira_001.jpg" />
             <h3>National Seminar</h3>
-            <p>Ministry of Communication and Informatics<br>2020</p>
+            <p>Ministry of Communication and Informatics<br />2020</p>
           </div>
         </div>
         <div class="column inline">
           <div class="content">
-            <img src="https://1.bp.blogspot.com/-fkRUt1lxOI8/YINnW6MZ1_I/AAAAAAAAAMU/fk3gCEGa2lICHUxAVJ-bfgXHvpAnqvaEwCLcBGAsYHQ/s0/SERTIFIKAT%2BRED%2B%25235_001.jpg
-            ">
+            <img
+              src="https://1.bp.blogspot.com/-fkRUt1lxOI8/YINnW6MZ1_I/AAAAAAAAAMU/fk3gCEGa2lICHUxAVJ-bfgXHvpAnqvaEwCLcBGAsYHQ/s0/SERTIFIKAT%2BRED%2B%25235_001.jpg
+            "
+            />
             <h3>National Seminar</h3>
-            <p>Ministry of Tourism and Creative Economy<br>2020</p>
+            <p>Ministry of Tourism and Creative Economy<br />2020</p>
           </div>
         </div>
       </div>
       <button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
     </div>
     <center>
-      <button class="btn" style="background-color: tomato; border-radius: 5px;"><a href="index.html" class="tbl-biru"><i class="fa fa-home"></i> HOME</a></button>
+      <button class="btn" style="background-color: tomato; border-radius: 5px">
+        <a href="index.html" class="tbl-biru"><i class="fa fa-home"></i> HOME</a>
+      </button>
     </center>
-    <footer style="background-color:gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px;">
+    <footer style="background-color: gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px">
       <div class="container">
-        <small style="color:white">Copyright &copy; 2021 - Andira Official</small>
+        <small style="color: white">&copy; 2021 | Andira Official</small>
       </div>
     </footer>
     <script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("column");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
-    }
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);
+      filterSelection("all");
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
         }
       }
-      element.className = arr1.join(" ");
-    }
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    var mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
       }
-    }
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>
   </body>
 </html>
