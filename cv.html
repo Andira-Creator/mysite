@@ -1,303 +1,385 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Andira Portfolio">
-        <meta name="keywords" content="Ands Official">
-        <meta name="autor" content="Andira Official">
-		    <meta name="viewport" content="width=device-width, initial-scale=1">
-		    <title>Andira Portfolio</title>
-		    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://kit.fontawesome.com/cba90e8547.js" crossorigin="anonymous"></script>
-        <style>
-         * {
-            box-sizing: border-box;
-        }
-        a {
-            text-decoration: none;
-        }
-        body {
-            margin: 0 auto; font-family: "Quicksand";
-        }
-        h1, h2 {
-          font-size: 15px;
-        }
-        p {
-          font-size: 13px;
-        }
-        .text-list {
-          padding-right: -50%; text-align: justify;
-        }
-        .clear {
-          clear: left;
-        }
-        .topnav {
-            overflow: visible; background-color:lightgrey; position: relative;
-        }
-        .topnav #myLinks {
-            display: none;  
-        }
-        .topnav a {
-            color:deepskyblue; padding: 14px 16px; text-decoration: none; font-size: 17px; display: block;
-        }
-        .topnav a.icon {
-            background:slategray; display: block; position: absolute;
-            right: 0; top: 0;
-            }
-        .topnav a:hover {
-            background-color:cyan; color: whitesmoke;
-        }
-        .active {
-            background-color:azure; color: white;
-        }
-        #data {
-          cursor: pointer;
-        }
-        .ands-11 {
-            width:50%; padding:5px; float: left; text-align: justify; font-size: 11px; margin-bottom: 15px;
-        }
-        .ands-11 img {
-	        width:100%;
-        }
-        .ands-11 a:hover img {
-	        transform: scale(1.2); transition: 1s; color: brown;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Andira Portfolio" />
+    <meta name="keywords" content="Ands Official" />
+    <meta name="autor" content="Andira Official" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andira | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/cba90e8547.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        margin: 0 auto;
+        font-family: "Quicksand";
+      }
+      h1,
+      h2 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      .text-list {
+        padding-right: -50%;
+        text-align: justify;
+      }
+      .clear {
+        clear: left;
+      }
+      .topnav {
+        overflow: visible;
+        background-color: lightgrey;
+        position: relative;
+      }
+      .topnav #myLinks {
+        display: none;
+      }
+      .topnav a {
+        color: deepskyblue;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      .topnav a.icon {
+        background: slategray;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav a:hover {
+        background-color: cyan;
+        color: whitesmoke;
+      }
+      .active {
+        background-color: azure;
+        color: white;
+      }
+      #data {
+        cursor: pointer;
+      }
+      .ands-11 {
+        width: 50%;
+        padding: 5px;
+        float: left;
+        text-align: justify;
+        font-size: 11px;
+        margin-bottom: 15px;
+      }
+      .ands-11 img {
+        width: 100%;
+      }
+      .ands-11 a:hover img {
+        transform: scale(1.2);
+        transition: 1s;
+        color: brown;
+      }
+      #biodata {
+        float: left;
+        padding-right: 5px;
+        padding-left: 10px;
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 40%;
+        font-size: 13px;
+      }
+      #work-list {
+        float: left;
+        padding-right: 5px;
+        padding-left: 10px;
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 55%;
+        font-size: 13px;
+      }
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        z-index: 1;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: cornflowerblue;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 30%;
+      }
+      #myBtn:hover {
+        background-color: #555;
+      }
+      @media all and (max-width: 1000px) {
         #biodata {
-          float: left; padding-right: 5px; padding-left: 10px; margin-left: 5px; margin-right: 10px; width: 40%; font-size: 13px;
+          font-size: 11px;
         }
         #work-list {
-          float: left; padding-right: 5px; padding-left: 10px; margin-left: 5px; margin-right: 10px; width: 55%; font-size: 13px;
+          font-size: 13px;
+          padding-left: 50px;
+          padding-right: 10px;
         }
-        #myBtn {
-            display: none; position: fixed; bottom: 15px;
-            right: 30px; z-index: 1; font-size: 13px; border: none;
-            outline: none; background-color:cornflowerblue; color: white;
-            cursor: pointer; padding: 10px; border-radius: 30%;
+        summary {
+          font-size: 13px;
         }
-        #myBtn:hover {
-            background-color: #555;
+        ol li {
+          font-size: 13px;
         }
-        @media all and (max-width: 1000px) {
-          #biodata {
-            font-size: 11px; 
-          }
-          #work-list {
-            font-size: 13px; padding-left: 50px; padding-right: 10px;
-          }
-          summary {
-            font-size: 13px;
-          }
-          ol li {
-            font-size: 13px;
-          }
+      }
+      @media all and (max-width: 640px) {
+        #biodata {
+          width: 95%;
+          font-size: 11px;
         }
-        @media all and (max-width: 640px) {
-          #biodata {
-            width: 95%; font-size: 11px; 
-          }
-          #work-list {
-            width: 95%; font-size: 13px; padding-left: 50px; padding-right: 10px;
-          }
-          summary {
-            font-size: 13px;
-          }
-          ol li {
-            font-size: 13px;
-          }
+        #work-list {
+          width: 95%;
+          font-size: 13px;
+          padding-left: 50px;
+          padding-right: 10px;
         }
-        </style>
-    </head>
-    <body>
-        <div class="topnav">
-            <a href="#" class="active" style="margin-left: 40px;">Andira Official</a>
-            <div id="myLinks">
-              <a href="index.html">Home</a>
-              <a href="andsblog.html">Blog</a>
+        summary {
+          font-size: 13px;
+        }
+        ol li {
+          font-size: 13px;
+        }
+        .ands-11 {
+          font-size: 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="#" class="active" style="margin-left: 40px">Andira Official</a>
+      <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="andsblog.html">Blog</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="containers">
+      <section id="biodata">
+        <figure id="bio">
+          <img src="Andira Official_Official Profile.jpg" alt="And Picture" alt="profil picture" style="width: 45%; border-radius: 5px" />
+          <h1 style="color: blue">AGUS ANDIRA, S.Sy</h1>
+        </figure>
+        <figure id="data">
+          <p><i class="fa fa-briefcase"></i> Frond End Web Development/Web Design/Graphic Designer</p>
+          <p><i class="fa fa-home"></i> Bengkalis, Riau-Indonesia</p>
+          <p><i class="fa fa-envelope"></i> andiramanaf@gmail.com</p>
+          <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/andira11_and/channel/" target="_blank">andira11_and</a></p>
+          <p><i class="fab fa-twitter"></i> <a href="https://twitter.com/Andira11_And" target="_blank"> Andira11_And</a></p>
+          <hr />
+          <section id="portfolio">
+            <div class="container">
+              <p style="color: blue">PROGRAMMING TRAINING</p>
+              <div class="ands-11">
+                <a href="https://1.bp.blogspot.com/-ZqzGWbkItPY/YIg08M-k7MI/AAAAAAAAANI/nkY6fHmOjhMqHNe866F5BKM7M2-kBx9qACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_001.png" target="_blank"
+                  ><img src="Andira Official_Front End_001.png" /><span>CERTIFICATE OF COMPLETION</span></a
+                >
+              </div>
+              <div class="ands-11">
+                <a href="https://1.bp.blogspot.com/-3zwMK-8Vpv4/YIg08EZLfyI/AAAAAAAAANM/dLCAL9XxX2wcgIMJmJM5eZgRp_Cqd9YvACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_002.png" target="_blank"
+                  ><img src="Andira Official_Front End_002.png" /><span>CERTIFICATE OF COMPLETION</span></a
+                >
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/2a224c26qq9il9" target="_blank"><img src="Andira Official_HTML & CSS.png" /><span>HTML & CSS</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/fab8d2e8qqqv1u" target="_blank"><img src="Andira Official_JavaScript.png" /><span>JAVASCRIPT</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/path_certificate/70e78425qsby1w" target="_blank"><img src="Andira Official_Path Pengembangan Web (Node.js).png" /><span>PATH PENGEMBANGAN WEB</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/29af8aabqreozh" target="_blank"><img src="Andira Official_Node.js.png" /><span>NODE.JS</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/e0f6f3d8qrhfs4" target="_blank"><img src="Andira Official_React.png" /><span>REACT</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/4cc76328qsaaho" target="_blank"><img src="Andira Official_SQL.png" /><span>SQL</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/42376fbbqsh7vu" target="_blank"><img src="Andira Official_Python.png" /><span>PYTHON</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/52f45433qre6jf" target="_blank"><img src="Andira Official_Sass.png" /><span>SASS</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/0fad20daqqzmai" target="_blank"><img src="Andira Official_Git.png" /><span>GIT</span></a>
+              </div>
+              <div class="ands-11">
+                <a href="https://progate.com/course_certificate/1d2292fbqqzj6r" target="_blank"><img src="Andira Official_Command Line.png" /><span>COMMAND LINE</span></a>
+              </div>
+              <div class="clear"></div>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
-        <div class="containers">
-          <section id="biodata">
-            <figure id="bio">
-                <img src="https://1.bp.blogspot.com/-sX3P8sh5xxI/YGSFbkUtVcI/AAAAAAAAAC4/EnSRqmWvVGQuWFA-nFpX7wIrXIFjqpGpwCLcBGAsYHQ/s16000/And%2527s.jpg" alt="And Picture" alt="profil picture" style="width: 45%; border-radius: 5px;">
-                <h1 style="color: blue;">AGUS ANDIRA, S.Sy</h1>
-            </figure>
-            <figure id="data">
-                <p><i class="fa fa-briefcase"></i> Frond End Web Development</p>
-                <p><i class="fa fa-home"></i> Bengkalis, Riau-Indonesia</p>
-                <p><i class="fa fa-envelope"></i> anexist2@gmail.com</p>
-                <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/andira11_and/channel/" target="_blank">andira11_and</a></p>
-                <p><i class="fab fa-twitter"></i> <a href="https://twitter.com/Andira11_And" target="_blank"> Andira11_And</a></p>
-                <hr>
-                <section id="portfolio">
-                    <div class="container">
-                      <p style="color: blue;">PROGRAM LANGUAGES TRAINING</p>
-                      <div class="ands-11"><a href="https://1.bp.blogspot.com/-ZqzGWbkItPY/YIg08M-k7MI/AAAAAAAAANI/nkY6fHmOjhMqHNe866F5BKM7M2-kBx9qACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_001.png" target="_blank"><img src="https://1.bp.blogspot.com/-ZqzGWbkItPY/YIg08M-k7MI/AAAAAAAAANI/nkY6fHmOjhMqHNe866F5BKM7M2-kBx9qACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_001.png
-                        "><span>Certificate of Completion</span></a></div>
-                      <div class="ands-11"><a href="https://1.bp.blogspot.com/-3zwMK-8Vpv4/YIg08EZLfyI/AAAAAAAAANM/dLCAL9XxX2wcgIMJmJM5eZgRp_Cqd9YvACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_002.png" target="_blank"><img src="https://1.bp.blogspot.com/-3zwMK-8Vpv4/YIg08EZLfyI/AAAAAAAAANM/dLCAL9XxX2wcgIMJmJM5eZgRp_Cqd9YvACLcBGAsYHQ/s0/0970777041-11%2BAgus%2BAndira_002.png"><span>Certificate of Completion</span></a></div>
-                      <div class="ands-11"><a href="http://bit.ly/AndsHtmlCss" target="_blank"><img src="https://1.bp.blogspot.com/-IuRFM3ioLHI/YGwKB14atpI/AAAAAAAAAE0/B4A-oYvhW-cJFchrXa34NjapidGS3ulDQCLcBGAsYHQ/s0/Sertifikat%2BHTML%2B%2526%2BCSS_Andira.png"><span>HTML & CSS</span></a></div>
-                      <div class="ands-11">
-                        <a href="http://bit.ly/AndsJS" target="_blank"><img src="https://1.bp.blogspot.com/-IsrTzx4qoMk/YGwJhszJtVI/AAAAAAAAAEs/vRqVw1DhlXEgAYYQin3XD_p-ZDFBj1RKgCLcBGAsYHQ/s0/Sertifikat%2BJavaScript_Andira.png"><span>JAVASCRIPT</span></a>
-                      </div>
-                      <div class="ands-11">
-                        <a href="https://1.bp.blogspot.com/-et-BtXgx3fs/YHky4bkvbOI/AAAAAAAAAJo/lBZpl9CkubY0ZlzyUUKBVeGb89CCLMeywCLcBGAsYHQ/s0/Sertifikat%2BSass_Andira.png" target="_blank"><img src="https://1.bp.blogspot.com/-et-BtXgx3fs/YHky4bkvbOI/AAAAAAAAAJo/lBZpl9CkubY0ZlzyUUKBVeGb89CCLMeywCLcBGAsYHQ/s0/Sertifikat%2BSass_Andira.png"><span>SASS</span></a>
-                      </div>
-                      <div class="ands-11">
-                        <a href="https://1.bp.blogspot.com/-0k2S_WB66ps/YHkzDQl3_II/AAAAAAAAAJs/SIA4wx0zqhozVfVwBodAbKtAl0spcUy0gCLcBGAsYHQ/s0/Sertifikat%2BNode.js-Andira.png" target="_blank"><img src="https://1.bp.blogspot.com/-0k2S_WB66ps/YHkzDQl3_II/AAAAAAAAAJs/SIA4wx0zqhozVfVwBodAbKtAl0spcUy0gCLcBGAsYHQ/s0/Sertifikat%2BNode.js-Andira.png"><span>NODE.JS</span></a>
-                      </div>
-                      <div class="ands-11">
-                        <a href="https://1.bp.blogspot.com/-xX2aFAY_I4k/YHkzNeqYWnI/AAAAAAAAAJ0/4GsdUdiN8SARkpn7zi0ZdePtldpgPLnxQCLcBGAsYHQ/s0/Sertifikat%2BReact_Andira.png" target="_blank"><img src="https://1.bp.blogspot.com/-xX2aFAY_I4k/YHkzNeqYWnI/AAAAAAAAAJ0/4GsdUdiN8SARkpn7zi0ZdePtldpgPLnxQCLcBGAsYHQ/s0/Sertifikat%2BReact_Andira.png"><span>REACT</span></a>
-                      </div>
-                      <div class="ands-11">
-                        <a href="https://1.bp.blogspot.com/-BLlcL_hkt04/YGwKgyKoiAI/AAAAAAAAAFA/E4AbGjnnLUgY7Mn1_XpvoxqAHsfewvuPQCLcBGAsYHQ/s0/Sertifiat%2BGit_Andira.png" target="_blank"><img src="https://1.bp.blogspot.com/-BLlcL_hkt04/YGwKgyKoiAI/AAAAAAAAAFA/E4AbGjnnLUgY7Mn1_XpvoxqAHsfewvuPQCLcBGAsYHQ/s0/Sertifiat%2BGit_Andira.png"><span>GIT</span></a>
-                      </div>
-                    </div>
-                  </section>
-                  <br>
-                  <p style="color: blue;">LANGUAGES SKILL</p>
-                  <p>English</p>
-                  <div class="round" style="height: 15px; width: 100%; background-color: deepskyblue;">
-                  </div>
-                  <p>Arabic</p>
-                  <div class="round" style="height: 15px; width: 100%; background-color: deepskyblue;">
-                  </div>
-                  <br>
-                  <p style="color: blue;">REFERENCE</p>
-                  <details>
-                    <summary>Website Project</summary>
-                      <ol type="A">
-                        <li><a href="index.html">My Website</a></li>
-                        <li><a href="https://andira11.github.io/projectteam/" target="_blank">J01 Class PROA Project Team</a></li>
-                        <li><a href="https://andira11.github.io/andscalculator/" target="_blank">Calculator Javascript Expert</a></li>
-                      </ol>
-                  </details>
-                  <details>
-                    <summary>Interactive Learning MS Mode</summary>
-                      <ol type="A">
-                        <li><a href="https://wakelet.com/@Ands" target="_blank">Wakelet</a></li>
-                        <li><a href="https://www.bookwidgets.com/play/-Aak4htp-iQAFs-MrPAAAA/3CCBD3F/fuzzle-time?teacher_id=4975839786565632" target="_blank">BookWidgets</a></li>
-                        <li><a href="https://sites.google.com/view/anddigitalaction/beranda" target="_blank">GSites</a></li>
-                        <li><a href="https://andsdigital.blogspot.com/2021/04/platform%20pembelajaran.html" target="_blank">BLOGSPOT</a></li>
-                      </ol>
-                  </details>
-              </figure><br>
-            <figure class="clear"></figure>
           </section>
-          <section id="work-list">
-            <article id="list">
-              <h2 style="color: blue;"><i class="fa fa-suitcase"></i> Work Experience</h2>
-              <div class="text-list">
-                <p>Administration and Finance Staff / SMPN 1 Mempura Siak Regency<p>
-                <p><i class="fa fa-calendar"></i> March 2017 - Jun 2020</p>
-                <p>Program Analysis and Preparation of Activity and Financial Report.</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>Deputy Principal for Curriculum and Learning and Teacher<p>
-                <p><i class="fa fa-calendar"></i> Jul 2015 - Mei 2019</p>
-                <p>Develop a Schedule of Activities and Learning. Analysis of Acttivities and Model of Learning as well as Evaluation and Follow-up on Activities and Learning.</p>
-                <hr>
-              </div>
-            </article>
-            <article id="list">
-              <h2 style="color: blue;"><i class="fas fa-graduation-cap"></i> Education</h2>
-              <div class="text-list">
-                <p>Bachelor Degree of Syari'ah, Islamic Economics Muamalah Study Program, 3.40</p>
-                <p><i class="fa fa-calendar"></i> 2008 - 2012</p>
-                <p>School of Islamic Advance Learning Tafaqquh Fiddin Dumai</p>
-                <hr>
-              </div>
-            </article>
-            <article id="list">
-              <h2 style="color: blue;"><i class="fa fa-award"></i> Competency Training</h2>
-              <div class="text-list">
-                <p>Front End Web Development</p>
-                <p><i class="fa fa-calendar"></i> 2021</p>
-                <p> Professional Academy Digitalent Scholarship, Ministry of Communication and Informatics, Republic of Indonesia</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>Pandu Digital - Interactive Learning Management System and Entrepreunership</p>
-                <p><i class="fa fa-calendar"></i> 2020</p>
-                <p> Pandu Digital, Ministry of Communication and Informatics, Republic of Indonesia</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>Digital Literacy Fundamental</p>
-                <p><i class="fa fa-calendar"></i> 2020</p>
-                <p> Indonesia ICT Watch, Asia-Pasific WhatsApp and Ministry of Communication and Informatics, Republic of Indonesia</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>English Training</p>
-                <p><i class="fa fa-calendar"></i> 2020</p>
-                <p> Indonesia Prakerja Program</p>
-                <hr>
-              </div>
-            </article>
-            <article id="list">
-              <h2 style="color: blue;"><i class="fa fa-briefcase"></i> Organizational Experience</h2>
-              <div class="text-list">
-                <p>Leader Web Project Team J01 Class</p>
-                <p><i class="fa fa-calendar"></i> 2021</p>
-                <p> Professional Academy Digitalent Scholarship, Ministry of Communication and Informatics, Republic of Indonesia</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>Chairperson of the Organizing Committee</p>
-                <p><i class="fa fa-calendar"></i> 2019</p>
-                <p> Facilitation of Arts Activities Sanggar Sekayuh Sehati Siak Regency Government Assistance Ministry of Education and Culture of the Republic of Indonesia</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>Leader Team Adiwiyata Mandiri Program</p>
-                <p><i class="fa fa-calendar"></i> 2018 - 2020</p>
-                <p> Secondary High School of 1 Mempura, Siak Regency</p>
-                <hr>
-              </div>
-              <div class="text-list">
-                <p>President of the Student Executive Board</p>
-                <p><i class="fa fa-calendar"></i> 2010 - 2011</p>
-                <p> Islamic Advance Learning Tafaqquh Fiddin Dumai</p>
-                <hr>
-              </div>
-              <button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
-            </article>  
-            <section id="clear"></section>
-          </section>
-          <div class="clear"></div>
-        </div>
-        <footer style="background-color:gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px;">
-          <div class="container">
-            <small style="color:white">Copyright &copy; 2021 - Andira Official</small>
+          <br />
+          <p style="color: blue">LANGUAGES SKILL</p>
+          <p>English</p>
+          <div class="round" style="height: 15px; width: 100%; background-color: deepskyblue"></div>
+          <p>Arabic</p>
+          <div class="round" style="height: 15px; width: 100%; background-color: deepskyblue"></div>
+          <br />
+          <p style="color: blue">REFERENCE</p>
+          <details>
+            <summary>Website Project</summary>
+            <ol type="A">
+              <li><a href="index.html">My Website</a></li>
+              <li><a href="https://andira11.github.io/projectteam/" target="_blank">J01 Class PROA Project Team</a></li>
+              <li><a href="https://andira11.github.io/andscalculator/" target="_blank">Calculator Javascript Expert</a></li>
+            </ol>
+          </details>
+          <details>
+            <summary>Interactive Learning MS Mode</summary>
+            <ol type="A">
+              <li><a href="https://wakelet.com/@Ands" target="_blank">Wakelet</a></li>
+              <li><a href="https://www.bookwidgets.com/play/-Aak4htp-iQAFs-MrPAAAA/3CCBD3F/fuzzle-time?teacher_id=4975839786565632" target="_blank">BookWidgets</a></li>
+              <li><a href="https://sites.google.com/view/anddigitalaction/beranda" target="_blank">GSites</a></li>
+              <li><a href="https://andsdigital.blogspot.com/2021/04/platform%20pembelajaran.html" target="_blank">BLOGSPOT</a></li>
+            </ol>
+          </details>
+        </figure>
+        <br />
+        <figure class="clear"></figure>
+      </section>
+      <section id="work-list">
+        <article id="list">
+          <h2 style="color: blue"><i class="fa fa-suitcase"></i> Work Experience</h2>
+          <div class="text-list">
+            <p>IT, Administration and Finance Staff / SMPN 1 Mempura Siak Regency</p>
+            <p></p>
+            <p><i class="fa fa-calendar"></i> March 2017 - Jun 2020</p>
+            <p>Program Analysis and Preparation of Activity and Financial Report.</p>
+            <hr />
           </div>
-        </footer>
-        <script>
-            function myFunction() {
-              var x = document.getElementById("myLinks");
-              if (x.style.display === "block") {
-              x.style.display = "none";
-              } else {
-              x.style.display = "block";
-              }
-          }
-          var mybutton = document.getElementById("myBtn");
-          window.onscroll = function() {scrollFunction()};
-          function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-            } else {
-              mybutton.style.display = "none";
-            }
-          }
-          function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
-        </script>
-    </body>
+          <div class="text-list">
+            <p>Deputy Principal for Curriculum and Learning and Teacher</p>
+            <p></p>
+            <p><i class="fa fa-calendar"></i> Jul 2015 - Mei 2019</p>
+            <p>Develop a Schedule of Activities and Learning. Analysis of Acttivities and Model of Learning as well as Evaluation and Follow-up on Activities and Learning.</p>
+            <hr />
+          </div>
+        </article>
+        <article id="list">
+          <h2 style="color: blue"><i class="fas fa-graduation-cap"></i> Education</h2>
+          <div class="text-list">
+            <p>Bachelor Degree of Syari'ah, Islamic Economics Muamalah Study Program, 3.40</p>
+            <p><i class="fa fa-calendar"></i> 2008 - 2012</p>
+            <p>School of Islamic Advance Learning Tafaqquh Fiddin Dumai</p>
+            <hr />
+          </div>
+        </article>
+        <article id="list">
+          <h2 style="color: blue"><i class="fa fa-award"></i> Competency Training</h2>
+          <div class="text-list">
+            <p>Front End Web Development</p>
+            <p><i class="fa fa-calendar"></i> 2021</p>
+            <p>Professional Academy Digitalent Scholarship, Ministry of Communication and Informatics, Republic of Indonesia</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>12 Programming Languages Training</p>
+            <p><i class="fa fa-calendar"></i> 2021</p>
+            <p>Progate, Indonesia</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>Pandu Digital - Interactive Learning Management System and Entrepreunership</p>
+            <p><i class="fa fa-calendar"></i> 2020</p>
+            <p>Pandu Digital, Ministry of Communication and Informatics, Republic of Indonesia</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>Digital Literacy Fundamental</p>
+            <p><i class="fa fa-calendar"></i> 2020</p>
+            <p>Indonesia ICT Watch, Asia-Pasific WhatsApp and Ministry of Communication and Informatics, Republic of Indonesia</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>English Training</p>
+            <p><i class="fa fa-calendar"></i> 2020</p>
+            <p>Indonesia Prakerja Program</p>
+            <hr />
+          </div>
+        </article>
+        <article id="list">
+          <h2 style="color: blue"><i class="fa fa-briefcase"></i> Organizational Experience</h2>
+          <div class="text-list">
+            <p>Leader Web Project Team J01 Class</p>
+            <p><i class="fa fa-calendar"></i> 2021</p>
+            <p>Professional Academy Digitalent Scholarship, Ministry of Communication and Informatics, Republic of Indonesia</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>Chairperson of the Organizing Committee</p>
+            <p><i class="fa fa-calendar"></i> 2019</p>
+            <p>Facilitation of Arts Activities Sanggar Sekayuh Sehati Siak Regency Government Assistance Ministry of Education and Culture of the Republic of Indonesia</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>Leader Team Adiwiyata Mandiri Program</p>
+            <p><i class="fa fa-calendar"></i> 2018 - 2020</p>
+            <p>Secondary High School of 1 Mempura, Siak Regency</p>
+            <hr />
+          </div>
+          <div class="text-list">
+            <p>President of the Student Executive Board</p>
+            <p><i class="fa fa-calendar"></i> 2010 - 2011</p>
+            <p>Islamic Advance Learning Tafaqquh Fiddin Dumai</p>
+            <hr />
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
+        </article>
+        <section id="clear"></section>
+      </section>
+      <div class="clear"></div>
+    </div>
+    <footer style="background-color: gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px">
+      <div class="container">
+        <small style="color: white">&copy; 2021 | Andira Official</small>
+      </div>
+    </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
 </html>
