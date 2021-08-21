@@ -1,335 +1,460 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Andira Home">
-        <meta name="keywords" content="Ands Official">
-        <meta name="autor" content="Andira Official">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Andira | Official Site</title>
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet'>
-        <script src="https://kit.fontawesome.com/cba90e8547.js" crossorigin="anonymous"></script>
-	<style type="text/css">
-        * {
-            box-sizing: border-box;
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Andira Home" />
+    <meta name="keywords" content="Ands Official" />
+    <meta name="autor" content="Andira Official" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andira | Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Buda:300" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/cba90e8547.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Buda";
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        font-size: 30px;
+        color: white;
+      }
+      #more {
+        display: none;
+      }
+      .clear {
+        clear: left;
+      }
+      .header {
+        padding: 40px;
+        text-align: center;
+        background: linear-gradient(to right, #fd923a, #8935f7);
+        color: white;
+      }
+      .header h1 {
+        font-size: 35px;
+      }
+      h2,
+      h5 {
+        font-size: 17px;
+      }
+      p {
+        font-size: 15px;
+        text-align: justify;
+      }
+      .slider {
+        overflow: hidden;
+        height: auto;
+      }
+      .slider figure div {
+        width: 10%;
+        float: left;
+      }
+      .slider figure img {
+        width: 100%;
+        float: left;
+      }
+      .slider figure {
+        position: relative;
+        width: 400%;
+        margin: 0;
+        left: 0;
+        animation: 50s slidy infinite;
+      }
+      @keyframes slidy {
+        0% {
+          left: 0%;
         }
-        body {
-            font-family: 'Buda'; margin: 0;
+        10% {
+          left: 0%;
         }
-        a {
-            text-decoration: none; font-size: 30px; color: white;
+        12% {
+          left: -100%;
         }
-        #more {display: none;}
-        .clear {
-            clear: left;
+        22% {
+          left: -100%;
+        }
+        24% {
+          left: -200%;
+        }
+        72% {
+          left: -100%;
+        }
+        82% {
+          left: -100%;
+        }
+        84% {
+          left: -100%;
+        }
+        94% {
+          left: -100%;
+        }
+        96% {
+          left: 0%;
+        }
+        100% {
+          left: 0%;
+        }
+      }
+      .navbar {
+        overflow: hidden;
+        background-color: darkcyan;
+      }
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      .subnav .subnavbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .subnav:hover .subnavbtn {
+        background-color: darkorange;
+      }
+      .subnav-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: darkturquoise;
+        width: 100%;
+        z-index: 1;
+      }
+      .subnav-content a {
+        float: right;
+        color: white;
+        text-decoration: none;
+      }
+      .subnav-content a:hover {
+        background-color: #eee;
+        color: black;
+      }
+      .subnav:hover .subnav-content {
+        display: block;
+      }
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+      .side {
+        -ms-flex: 30%;
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      .side-bio {
+        height: 200px;
+      }
+      .side-bio img {
+        width: 40%;
+        border-radius: 5px;
+      }
+      .main {
+        -ms-flex: 70%;
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+      .main img {
+        width: 50%;
+      }
+      .fakeimg img {
+        width: 45%;
+      }
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        z-index: 1;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: coral;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 30%;
+      }
+      #myBtn:hover {
+        background-color: #555;
+      }
+      @media screen and (max-width: 780px) {
+        .row {
+          flex-direction: column;
         }
         .header {
-            padding: 40px; text-align: center;
-            background: linear-gradient(to right, #fd923a, #8935f7); color:white;
+          padding: 25px;
         }
         .header h1 {
-            font-size: 35px;
+          font-size: 25px;
         }
-        h2, h5 {
-            font-size: 17px;
+        h2,
+        h5 {
+          font-size: 13px;
         }
         p {
-            font-size: 15px; text-align: justify;
-        }
-        .slider{
-            overflow: hidden; height: auto;
-        }
-        .slider figure div{
-            width: 10%; float: left;
-        }
-        .slider figure img{
-            width: 100%; float: left;
-        }
-        .slider figure{
-            position: relative; width: 400%; margin: 0; left: 0;
-            animation: 50s slidy infinite;
-        }
-        @keyframes slidy{
-            0%{left: 0%} 10%{left: 0%;} 12%{left: -100%;} 
-			22%{left: -100%;} 24%{left: -200%;} 72%{left: -100%;}
-            82%{left: -100%;} 84%{left: -100%;} 94%{left: -100%;}
-            96%{left: 0%;} 100%{left: 0%;}
-        }
-        .navbar {
-            overflow: hidden; background-color:darkcyan;
+          font-size: 11px;
         }
         .navbar a {
-            float: left; font-size: 16px; color: white;
-            text-align: center; padding: 14px 20px;
-            text-decoration: none;
+          float: none;
+          width: 100%;
+          font-size: 11px;
+          padding: 10px 10px;
         }
         .subnav .subnavbtn {
-            font-size: 16px; border: none; outline: none;
-            color: white; padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit; margin: 0;
+          width: 100%;
+          font-size: 11px;
+          padding: 2px 15px;
         }
-
-        .navbar a:hover, .subnav:hover .subnavbtn {
-            background-color:darkorange;
-        }
-        .subnav-content {
-            display: none; position: absolute; left: 0;
-            background-color:darkturquoise; width: 100%; z-index: 1;
-        }
-        .subnav-content a {
-            float:right; color: white; text-decoration: none;
-        }
-        .subnav-content a:hover {
-            background-color: #eee; color: black;
-        }
-        .subnav:hover .subnav-content {
-            display: block;
-        }
-        .row {
-            display: -ms-flexbox; display: flex;
-            -ms-flex-wrap: wrap; flex-wrap: wrap;
-        }
-        .side {
-            -ms-flex: 30%; flex: 30%;
-            background-color: #f1f1f1; padding: 20px;
+        .slider p {
+          font-size: 13px;
         }
         .side-bio {
-            height: 200px;
+          height: 850px;
         }
         .side-bio img {
-            width: 40%; border-radius: 5px;
+          width: 40%;
+          border-radius: 5px;
         }
-        .main {
-            -ms-flex: 70%; flex: 70%; background-color: white; padding: 20px;
+        figcaption {
+          font-size: 11px;
         }
-        .main img {
-            width: 50%;
+      }
+      @media screen and (max-width: 400px) {
+        .header {
+          padding: 25px;
         }
-        .fakeimg img{
-           width: 45%;
+        .header h1 {
+          font-size: 25px;
         }
-        #myBtn {
-            display: none; position: fixed; bottom: 15px;
-            right: 30px; z-index: 1; font-size: 13px; border: none;
-            outline: none; background-color:coral; color: white;
-            cursor: pointer; padding: 10px; border-radius: 30%;
+        h2,
+        h5 {
+          font-size: 13px;
         }
-        #myBtn:hover {
-            background-color: #555;
+        p {
+          font-size: 11px;
         }
-        @media screen and (max-width: 780px) {
-            .row {
-                flex-direction: column;
-            }
-            .header {
-                padding: 25px;
-            }
-            .header h1 {
-                font-size: 25px;
-            }
-            h2, h5 {
-                font-size: 13px;
-            }
-            p {
-                font-size: 11px;
-            }   
-            .navbar a {
-                float: none; width: 100%; font-size: 11px;
-                padding: 10px 10px;
-            }
-            .subnav .subnavbtn {
-                width: 100%; font-size: 11px;
-                padding: 2px 15px;
-            }
-            .slider p {
-                font-size: 13px;
-            }
-            .side-bio {
-                height: 850px;
-            }
-            .side-bio img {
-                width: 40%; border-radius: 5px;
-            }
-            figcaption {
-                font-size: 11px;
-            } 
+        .navbar a {
+          float: none;
+          width: 100%;
+          font-size: 11px;
+          padding: 5px 6px;
         }
-        @media screen and (max-width: 400px) {
-            .header {
-                padding: 25px;
-            }
-            .header h1 {
-                font-size: 25px;
-            }
-            h2, h5 {
-                font-size: 13px;
-            }
-            p {
-                font-size: 11px;
-            }   
-            .navbar a {
-                float: none; width: 100%; font-size: 11px;
-                padding: 5px 6px;
-            }
-            .subnav .subnavbtn {
-                width: 100%; font-size: 11px;
-                padding: 2px 15px;
-            }
-            .slider p {
-                font-size: 13px;
-            }
-            .side-bio {
-            height: 850px;
-            }
-            .side-bio img {
-                width: 40%; border-radius: 5px;
-            }
-            figcaption {
-                font-size: 11px;
-            }
+        .subnav .subnavbtn {
+          width: 100%;
+          font-size: 11px;
+          padding: 2px 15px;
         }
-        </style>
-    </head>
-    <body>
+        .slider p {
+          font-size: 13px;
+        }
+        .side-bio {
+          height: 960px;
+        }
+        .side-bio img {
+          width: 40%;
+          border-radius: 5px;
+        }
+        figcaption {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div class="header">
-        <a href="http://bit.ly/AndsInstagram" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="http://bit.ly/AndsTwitter" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="http://bit.ly/AndsFacebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <h1>ANDIRA OFFICIAL</h1>
-        <p style="text-align: center;">TUTORIAL-TIPS-LEARNING-IT-INSPIRATION-ACTIVITY</p>   
+      <a href="http://bit.ly/AndsInstagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="http://bit.ly/AndsTwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="http://bit.ly/AndsFacebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <h1>ANDIRA OFFICIAL</h1>
+      <p style="text-align: center">TUTORIAL-TIPS-LEARNING-IT-INSPIRATION-ACTIVITY</p>
     </div>
     <div class="slider">
-        <p style=" padding-top: 8px; padding-bottom: 2px; text-align: center; color:blue;"><sup>WELCOME TO MY SITE AND GET THE BEST EXPLORATION</sup></p>
-        <figure>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-9ib7JVRNY-k/YG7iqmy80iI/AAAAAAAAAG4/CAjVIk0i53wHhJKgtCVRqIl7AVBeTndZACLcBGAsYHQ/s0/1.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-DnRgNpocmU8/YG7i0aweWjI/AAAAAAAAAG8/Rsd13MWuovg9gpbGP7gsyabltWjSTjWGACLcBGAsYHQ/s0/2.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-JejSGIA2-Bw/YG7i_EPrr3I/AAAAAAAAAHE/XoMFSDjKkRQNND7uZiP0ntDsLud1a3IhgCLcBGAsYHQ/s0/3.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-RmJWkgfOZ-o/YG7jIX4MRJI/AAAAAAAAAHM/16wCmo1oyk8lJn1q9K2ZQCLPzLnAI6saACLcBGAsYHQ/s0/4.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-zGj6nskL3OU/YG7jp8rutFI/AAAAAAAAAHk/-RmfwK12nxYFCPkHhITo5LJ_Pi7AXOJWwCLcBGAsYHQ/s0/5.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-yyziBvkerrk/YG7jy160wWI/AAAAAAAAAHs/teuyFRhYrpwMGH0nK1zmx-TGYTs4_VFtwCLcBGAsYHQ/s0/8.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-UGrmt9xyhHM/YG7jT7dxrNI/AAAAAAAAAHU/Zf_5zHwj0yA6imq4n06T4xyjc3aCTydxQCLcBGAsYHQ/s0/6.jpg"></div>
-            <div class="slide"><img src="https://1.bp.blogspot.com/-QJidEqczQUg/YG7jgtxfX8I/AAAAAAAAAHc/BBi61qi43sEQyE0MZIaGhaYOZ039iAUUQCLcBGAsYHQ/s0/7.jpg"></div>
-        </figure>
-        <div class="clear"></div>
+      <p style="padding-top: 8px; padding-bottom: 2px; text-align: center; color: blue"><sup>WELCOME TO MY SITE AND GET THE BEST EXPLORATION</sup></p>
+      <figure>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-9ib7JVRNY-k/YG7iqmy80iI/AAAAAAAAAG4/CAjVIk0i53wHhJKgtCVRqIl7AVBeTndZACLcBGAsYHQ/s0/1.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-DnRgNpocmU8/YG7i0aweWjI/AAAAAAAAAG8/Rsd13MWuovg9gpbGP7gsyabltWjSTjWGACLcBGAsYHQ/s0/2.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-JejSGIA2-Bw/YG7i_EPrr3I/AAAAAAAAAHE/XoMFSDjKkRQNND7uZiP0ntDsLud1a3IhgCLcBGAsYHQ/s0/3.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-RmJWkgfOZ-o/YG7jIX4MRJI/AAAAAAAAAHM/16wCmo1oyk8lJn1q9K2ZQCLPzLnAI6saACLcBGAsYHQ/s0/4.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-zGj6nskL3OU/YG7jp8rutFI/AAAAAAAAAHk/-RmfwK12nxYFCPkHhITo5LJ_Pi7AXOJWwCLcBGAsYHQ/s0/5.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-yyziBvkerrk/YG7jy160wWI/AAAAAAAAAHs/teuyFRhYrpwMGH0nK1zmx-TGYTs4_VFtwCLcBGAsYHQ/s0/8.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-UGrmt9xyhHM/YG7jT7dxrNI/AAAAAAAAAHU/Zf_5zHwj0yA6imq4n06T4xyjc3aCTydxQCLcBGAsYHQ/s0/6.jpg" /></div>
+        <div class="slide"><img src="https://1.bp.blogspot.com/-QJidEqczQUg/YG7jgtxfX8I/AAAAAAAAAHc/BBi61qi43sEQyE0MZIaGhaYOZ039iAUUQCLcBGAsYHQ/s0/7.jpg" /></div>
+      </figure>
+      <div class="clear"></div>
     </div>
     <div class="navbar">
-        <a href="edition.html"><i class="fa fa-home"></i> SITE HOME</a>
-        <a href="cv.html" class="tbl-biru"><i class="fa fa-briefcase"></i> PORTFOLIO</a>
-        <a href="andsblog.html" class="tbl-biru"><i class="fa fa-globe"></i> BLOG</a>
-        <div class="subnav" style="float: right;">
-            <button class="subnavbtn"><i class="fa fa-bar-chart"></i> REFERENCE <i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="training.html"><i class="fas fa-graduation-cap"></i> COMPETENCY AND TRAINING</a>
-                <a href="https://andsdigital.blogspot.com/2021/04/platform%20pembelajaran.html" target="_blank">BLOGSPOT</a>
-            </div>
+      <a href="edition.html"><i class="fa fa-home"></i> SITE HOME</a>
+      <a href="cv.html" class="tbl-biru"><i class="fa fa-briefcase"></i> PORTFOLIO</a>
+      <a href="andsblog.html" class="tbl-biru"><i class="fa fa-globe"></i> BLOG</a>
+      <div class="subnav" style="float: right">
+        <button class="subnavbtn"><i class="fa fa-bar-chart"></i> REFERENCE <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="training.html"><i class="fas fa-graduation-cap"></i> COMPETENCY AND TRAINING</a>
+          <a href="https://andsdigital.blogspot.com/2021/04/platform%20pembelajaran.html" target="_blank">BLOGSPOT</a>
         </div>
-        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
     </div>
     <div class="row">
-        <div class="side">
-            <div class="side-bio">
-                <a href="index.html">
-                <img src="Andira Official_Profile.jpg" alt="Picture" style="margin-left: 2px;"></a>
-                <p>Just me, myself and I, exploring the universe of uknownment.
-                <br>I have a heart of love and a interest blog.
-                <br>I want to share my world with you.
-                <br>
-                <span style="color:blue"> Do and Give The Best For Your Self and Be a Creative</p>
-                </span><br>
-                <figcaption>&copy; 2021 Digital Action</figcaption>
-                <p>Ministry of Communication and Informatics
-                    <br>Republic of Indonesia</p>
-                <p>Digitalent Scholarship Professional Academy
-                    <br><b style="color: blue;">Certificate of Completion</b>
-                    <br>HTML, CSS and JavaScript</p>
-                <div class="fakeimg">
-                    <img src="Andira Official_Front End_001.png" alt="Certificate">
-                    <img src="Andira Official_Front End_002.png" alt="Certificate">
-                </div><br>
-                <p>Path Pengembangan Web (Node.js)
-                    <br><b style="color: blue;">Certificate of Completion</b>
-                    <br>HTML, CSS, JavaScript, Node.js and SQL</p>
-                <div class="fakeimg">
-                    <img src="Andira Official_Path Pengembangan Web (Node.js).png" alt="Certificate">
-                </div><br>
-                <p>Pandu Digital
-                    <br><b style="color: blue;">Certificate of Completion</b>
-                    <br>Pandu Digital</p>
-                <div class="fakeimg">
-                    <img src="Andira Official_Pandu Digital.jpg" alt="Certificate">
-                    <img src="Andira Official_TOT Pandu Digital.png" alt="Certificate">
-                </div><br>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="main">
-            <h2>DIGITAL SERIES</h2>
-            <h5>Wakelet Platform<br>"Free Platform for Teacher. Everything in one Place", April 23, 2021</h5>
-            <img src="https://1.bp.blogspot.com/-k90h2PM5XL8/YHHLiG6kkfI/AAAAAAAAAIQ/itxzk4nC_M8S-7jy4Ojm9vJwBJKPX9w4gCLcBGAsYHQ/s0/picturewakelet.png">
-            <p>Be a Creative..</p>
-            <p>Berkembangnya arus teknologi memberikan dampak yang positif untuk semua sektor kegiatan terutama di bidang pendidikan.
-            Lahirnya ide dan kreatifitas setiap individu telah memberikan dampak yang baik dalam memberikan kontribusi dalam menghadapi suatu permasalahan yang dihadapi terutama pada masa pandemi Covid-19 yang dihadapi oleh seluruh dunia saat ini.
-            <br>Disini saya ingin mengenalkan sebuah platform gratis yang memungkinkan anda membuat konten untuk disimpan dan dibagikan. nilai dan konten yang dapat dimuatkan di antaranya video, artikel, gambar, tweet, tautan dan bahkan anda bisa menambahkan teks anda sendiri disini. platform ini bernama Wakelet.<br>
-            Sebagai bagian dari upaya dan kreasi anda dalam membuat konten pembelajaran berbentuk visual, bisa anda muatkan di platform ini.<br></p>
-            <h5>BookWidgets Platform<br>"Create your own Interactive Exercises", April 25, 2021</h5>
-            <img src="https://1.bp.blogspot.com/-MdkuO9NirYo/YHHK_8zvAjI/AAAAAAAAAII/nX2_PS3uNxcSFrTJwdkwMly1T4Wc5QK2ACLcBGAsYHQ/s0/picture%2Bbookwidgets.png">
-            <p>Be a Great Creation..</p>
-            <p>Pada artikel sebelumnya kita sedikit membahas tentang Wakelet platform. kali ini kita akan mengenal sebuah platform berbayar yang memiliki fitur-fitur kreatif untuk para guru dalam menyusun dan merancang konten pembelajaran dan juga model-model evaluasi yang akan disampaikan kepada peserta didik.
-            <br>Disini saya ingin mengenalkan beberapa fitur yang akan anda dapatkan sebagai pengguna platform ini.<br>
-            Fitur Tes dan Kajian yang terdiri dari Slip Keluar, Kartu Flash, Kuis, Papan Tulis Berbagi, Lini Masa, Web Quest, Lembar Kerja dan beberapa fitur lainnya. Kedua Fitur Permainan yang memungkinkan para pengguna untuk merancang sebuah permainan yang kreatif berdasarkan materi pembelajaran dan soal-soal lainnya. Fitur Permainan ini terdiri dari Kartu Bingo, Teka-teki silang, Peta Minda, Mencocokkan pasangan kartu dan fitur-fitur kreatif lainnya.
-            <br>Ketiga Fitur Gambar dan Video yang mengarahkan kepada sebuah konten pembelajaran dan penilaian berbasis gambar dan video. Pengguna bisa memilih berbagai fitur disini seperti Perbandingan gambar, Urutan Frame, Korsel gambar, Gambar Acak dan fitur-fitur keren lainnya yang dapat anda gunakan.
-            <br>Update terbaru dari platform ini memudahkan para pengguna untuk mempelajari dan menganalisa fitur-fitur untuk konten pembelajaran dan penilaian dengan mengaktifkan pilihan versi bahasa Indonesia.
-            <br> Tunggu apa lagi? mari berkreasi dan berikan karya terbaik anda.
-
-            <h5>Google Platform<br>"Teach From Anywhere", April 27, 2021</h5>
-            <img src="https://1.bp.blogspot.com/--GZA-8GhHWs/YHHLqfKQYRI/AAAAAAAAAIU/iEdTlz6skLgZiYhim-W9G7eg_4Kkrud3gCLcBGAsYHQ/s0/picturegoole.png">
-            <p>Make a Great Experience..</p>
-            <p>Lahirnya ide dan kreatifitas setiap individu telah memberikan dampak yang baik dalam memberikan kontribusi dalam menghadapi suatu permasalahan yang dihadapi terutama pada masa pandemi Covid-19 yang dihadapi oleh seluruh dunia saat ini.
-            <br>Sebelumya kita sudah mengenal secara umum platform-platform keren yang menjadi opsi pilihan khususnya para guru dalam membuat dan menyajikan konten pembelajaran dan penilaian yang disusun secara sistem digital.
-            <br>Disini saya yakin dan percaya bahwa semua sudah tahu dan sudah banyak yang menggunakan akses dan layanan google dalam membuat dan mengembangkan konten pembelajaran dan penilaian di masing-masing satuan kerjanya.
-            <br>Sedikit mengulas dan berbagi beberapa fitur dan referensi dari google khususnya dalam membuat sebuah konten kreatif baik untuk pembelajaran dan kegiatan pelatihan serta kegiatan lainnya. Diantara fitur yang paling banyak digunakan yaitu Google Form sebagai media membuat form untuk kegiatan pendaftaran, form untuk kuis dan soal dan masih banyak lagi kreasi serta pengembangan konten yang bisa dilakukan. Selanjutnya ada Google Sites atau GSites untuk membangun sebuah website kelas untuk peserta didik dan juga untuk promosi kegiatan usaha ataupun lainnya sesuai dengan kebutuhan masing-masing pengguna dalam mengaplikasi kreativitasnya.
-            <br>Menarik bukan? nah, kembali kepada setiap individu untuk mampu meningkatkan keterampilan mereka dalam mengembangkan kreatifitas dan konten sesuai dengan kebutuhan mereka masing-masing.
-            <br>Up your Skill and Be a Creative..</p>
+      <div class="side">
+        <div class="side-bio">
+          <a href="index.html"> <img src="Andira_Profile.png" alt="Picture" style="margin-left: 1px" /></a><br />
+          <p><span style="color: crimson"> Digital Activist | Front End Web Development</span> <br />I have a heart of love and a interest site. <br />I want to share my world with you. <br /></p>
+          <figcaption>&copy; Andira | 2021 Digital Action</figcaption>
+          <p>ICT Watch, WhatsApp and Ministry of Communication and Informatics Republic of Indonesia <br /><b style="color: blue">Certificate of Completion</b> <br />Training of Trainers-JaWAra Internet Sehat</p>
+          <div class="fakeimg">
+            <img src="Andira_ToT JaWAraInternetSehat.png" alt="Certificate" />
+          </div>
+          <br />
+          <p>Digitalent Scholarship Professional Academy <br /><b style="color: blue">Certificate of Completion</b> <br />HTML, CSS and JavaScript</p>
+          <div class="fakeimg">
+            <img src="Andira Official_Front End_001.png" alt="Certificate" />
+            <img src="Andira Official_Front End_002.png" alt="Certificate" />
+          </div>
+          <br />
+          <p>Path Pengembangan Web (Node.js) <br /><b style="color: blue">Certificate of Completion</b> <br />HTML, CSS, JavaScript, Node.js and SQL</p>
+          <div class="fakeimg">
+            <img src="Andira Official_Path Pengembangan Web (Node.js).png" alt="Certificate" />
+          </div>
+          <br />
+          <p>Pandu Digital <br /><b style="color: blue">Certificate of Completion</b> <br />Pandu Digital</p>
+          <div class="fakeimg">
+            <img src="Andira Official_Pandu Digital.jpg" alt="Certificate" />
+            <img src="Andira Official_TOT Pandu Digital.png" alt="Certificate" />
+          </div>
+          <br />
         </div>
         <div class="clear"></div>
+      </div>
+      <div class="main">
+        <h2>DIGITAL AND EDUCATION SERIES</h2>
+        <!-- jawara -->
+        <h5>Andira DEC Pemuda Bengkalis dan 59 Aktivis Muda Indonesia Terpilih<br />"JaWAra Internet Sehat Indonesia", August 21, 2021</h5>
+        <img src="Launching Events_JaWAra.jpg" />
+        <p>Youth Movement Digital Literacy - Edukasi Literasi Digital</p>
+        <p>
+          <strong>Bengkalis, 21 Agustus 2021</strong> – Pandemi COVID-19 memberikan peluang sekaligus tantangan baru bagi masyarakat di dunia digital. Peluang muncul dengan peningkatan jumlah pengguna internet dan beragam penggunaan untuk
+          berbagai macam aktivitas produktif, termasuk bekerja dan belajar. Akan tetapi hal ini juga beriringan dengan munculnya beragam tantangan, seperti makin maraknya dan berkembangnya berita dan informasi hoaks/disinformasi, khususnya
+          terkait COVID-19 dan Vaksinasi serta tantangan terkait privasi dan data pribadi di internet dan era digital saat ini.<br />
+          <strong>Agus Andira yang selalu disapa Andi</strong> ini, seorang pemuda dari Kabupaten Bengkalis Provinsi Riau dengan aktivitas keseharian sebagai pegiat digital dan mendedikasikan diri dalam pengabdian dibidang digital dan
+          pendidikan, aktif di beberapa kegiatan Nasional dan Internasional dan mendirikan sebuah komunitas yang bergerak di isu digital dan pendidikan ini telah berhasil terpilih dan tergabung dalam sebuah program Nasional “JaWAra Internet
+          Sehat-Youth Movement Digital Literacy “ sebuah Gerakan Edukasi Literasi Digital yang di inisiasi oleh ICT Wach dan WhatsApp dengan dukungan Kementerian Komunikasi dan Informatika Republik Indonesia setelah melalui tahapan seleksi
+          administrasi dan wawancara di bulan juni yang lalu.<br />
+          “Alhamdulillah, anugerah dari Allah SWT dan suatu kehormatan serta kebanggaan yang luar biasa buat saya terpilih dan diberikan kepercayaan dalam program ICT Watch dan WhatsApp dalam mendedikasikan diri untuk menjalankan program
+          dan kegiatan Edukasi Literasi Digital yang menjadi urgensi dan program Pemerintah kita saat ini terkait tantangan-tantangan yang akan kita hadapi dan terus berkembang khususnya di era digital yang akan di impelementasikan untuk
+          seluruh lapisan masyarakat, “ kata Andi.<br />
+          “Insya Allah konsep dan program yang akan dijalankan, mengangkat 2 isu utama yang menjadi perbincangan dan tantangan kita terkait hoaks covid-19 dan vaksinasi serta tantangan yang berkaitan dengan keamanan privasi dan data pribadi
+          di era digital saat ini. Saya juga sudah membangun komunikasi kepada mitra-mitra kegiatan di antaranya instansi pemerintahan, perguruan tinggi dan komunitas lokal dalam membangun kerjasama dan dukungan dalam melaksanakan dan
+          menjalankan kegiatan ini. Hal ini sangat urgensi dan tanggungjawab kita bersama. kita butuh langkah yang tepat agar semua masyarakat terliterasi dan memiliki keterampilan serta awareness dalam menghadapi hal-hal yang negatif
+          digital dan agar kita terhindar menjadi sasaran para pelaku cyber atau pihak-pihak yang tidak bertanggungjawab, “ lanjutnya. <br />
+        </p>
+        <!-- end -->
+        <h5>Linktree Platform<br />"The Only Link You’ll Ever Need", August 11, 2021</h5>
+        <img src="Linktree_Cover.png" />
+        <p>Safe, trusted, private..</p>
+        <p>
+          Connect audiences to all of your content with just one link, quotes yang menjadikan platform ini memiliki ketertarikan tersendiri dengan konsep dan design yang menarik dan sederhana agar mudah digunakan oleh pengguna sebagai media
+          yang kreatif dan sangat menarik.
+          <br />Berkembangnya arus teknologi memberikan dampak yang positif untuk semua sektor kegiatan dan juga hal ini beriringan dengan berbagai macam tantangan khususnya dalam meningkatkan kapasitas dan keterampilan kita terkait bidang
+          karir dan kegiatan yang kita jalani dengan mengikuti arus dan perkembangan teknologi saat ini. Linktree adalah landasan untuk video, artikel, resep, tur, toko, situs web, pos sosial terbaru Anda di mana pun Anda online, Dari tips
+          untuk konten Anda, hingga donasi untuk proyek Anda, biarkan penggemar & pengikut Anda mendukung Anda dalam memonetisasi hasrat Anda.<br />
+          Membuat Linktree membutuhkan waktu beberapa detik. Gunakan editor drag-and-drop sederhana untuk mengelola konten Anda dengan mudah, dan hal yang menarik, platform ini hadir sebagai bagian dari upaya dan kreasi anda dalam membangun
+          konsep materi dan strategi, platform ini merupakan bagian dan solusi yang bisa anda gunakan. Be a Creative..<br />
+        </p>
+        <h5>Wakelet Platform<br />"Free Platform for Teacher. Everything in one Place", April 23, 2021</h5>
+        <img src="Wakelet_Cover.png" />
+        <p>Be a Creative..</p>
+        <p>
+          Berkembangnya arus teknologi memberikan dampak yang positif untuk semua sektor kegiatan terutama di bidang pendidikan. Lahirnya ide dan kreatifitas setiap individu telah memberikan dampak yang baik dalam memberikan kontribusi
+          dalam menghadapi suatu permasalahan yang dihadapi terutama pada masa pandemi Covid-19 yang dihadapi oleh seluruh dunia saat ini. <br />Disini saya ingin mengenalkan sebuah platform gratis yang memungkinkan anda membuat konten
+          untuk disimpan dan dibagikan. nilai dan konten yang dapat dimuatkan di antaranya video, artikel, gambar, tweet, tautan dan bahkan anda bisa menambahkan teks anda sendiri disini. platform ini bernama Wakelet.<br />
+          Sebagai bagian dari upaya dan kreasi anda dalam membuat konten pembelajaran berbentuk visual, bisa anda muatkan di platform ini.<br />
+        </p>
+        <h5>BookWidgets Platform<br />"Create your own Interactive Exercises", April 25, 2021</h5>
+        <img src="BookWidgets_Cover.png" />
+        <p>Be a Great Creation..</p>
+        <p>
+          Pada artikel sebelumnya kita sedikit membahas tentang Wakelet platform. kali ini kita akan mengenal sebuah platform berbayar yang memiliki fitur-fitur kreatif untuk para guru dalam menyusun dan merancang konten pembelajaran dan
+          juga model-model evaluasi yang akan disampaikan kepada peserta didik. <br />Disini saya ingin mengenalkan beberapa fitur yang akan anda dapatkan sebagai pengguna platform ini.<br />
+          Fitur Tes dan Kajian yang terdiri dari Slip Keluar, Kartu Flash, Kuis, Papan Tulis Berbagi, Lini Masa, Web Quest, Lembar Kerja dan beberapa fitur lainnya. Kedua Fitur Permainan yang memungkinkan para pengguna untuk merancang
+          sebuah permainan yang kreatif berdasarkan materi pembelajaran dan soal-soal lainnya. Fitur Permainan ini terdiri dari Kartu Bingo, Teka-teki silang, Peta Minda, Mencocokkan pasangan kartu dan fitur-fitur kreatif lainnya.
+          <br />Ketiga Fitur Gambar dan Video yang mengarahkan kepada sebuah konten pembelajaran dan penilaian berbasis gambar dan video. Pengguna bisa memilih berbagai fitur disini seperti Perbandingan gambar, Urutan Frame, Korsel gambar,
+          Gambar Acak dan fitur-fitur keren lainnya yang dapat anda gunakan. <br />Update terbaru dari platform ini memudahkan para pengguna untuk mempelajari dan menganalisa fitur-fitur untuk konten pembelajaran dan penilaian dengan
+          mengaktifkan pilihan versi bahasa Indonesia. <br />
+          Tunggu apa lagi? mari berkreasi dan berikan karya terbaik anda.
+        </p>
+
+        <h5>Google Platform<br />"Teach From Anywhere", April 27, 2021</h5>
+        <img src="https://1.bp.blogspot.com/--GZA-8GhHWs/YHHLqfKQYRI/AAAAAAAAAIU/iEdTlz6skLgZiYhim-W9G7eg_4Kkrud3gCLcBGAsYHQ/s0/picturegoole.png" />
+        <p>Make a Great Experience..</p>
+        <p>
+          Lahirnya ide dan kreatifitas setiap individu telah memberikan dampak yang baik dalam memberikan kontribusi dalam menghadapi suatu permasalahan yang dihadapi terutama pada masa pandemi Covid-19 yang dihadapi oleh seluruh dunia saat
+          ini. <br />Sebelumya kita sudah mengenal secara umum platform-platform keren yang menjadi opsi pilihan khususnya para guru dalam membuat dan menyajikan konten pembelajaran dan penilaian yang disusun secara sistem digital.
+          <br />Disini saya yakin dan percaya bahwa semua sudah tahu dan sudah banyak yang menggunakan akses dan layanan google dalam membuat dan mengembangkan konten pembelajaran dan penilaian di masing-masing satuan kerjanya.
+          <br />Sedikit mengulas dan berbagi beberapa fitur dan referensi dari google khususnya dalam membuat sebuah konten kreatif baik untuk pembelajaran dan kegiatan pelatihan serta kegiatan lainnya. Diantara fitur yang paling banyak
+          digunakan yaitu Google Form sebagai media membuat form untuk kegiatan pendaftaran, form untuk kuis dan soal dan masih banyak lagi kreasi serta pengembangan konten yang bisa dilakukan. Selanjutnya ada Google Sites atau GSites untuk
+          membangun sebuah website kelas untuk peserta didik dan juga untuk promosi kegiatan usaha ataupun lainnya sesuai dengan kebutuhan masing-masing pengguna dalam mengaplikasi kreativitasnya. <br />Menarik bukan? nah, kembali kepada
+          setiap individu untuk mampu meningkatkan keterampilan mereka dalam mengembangkan kreatifitas dan konten sesuai dengan kebutuhan mereka masing-masing. <br />Up your Skill and Be a Creative..
+        </p>
+      </div>
+      <div class="clear"></div>
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
-    <footer style="background-color:gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px;">
-        <div class="container">
-            <small style="color:white">&copy; 2021 | Andira Official</small>
-        </div>
-    </footer> 
+    <footer style="background-color: gray; margin-top: 5px; font-size: 15px; padding: 15px; text-align: center; border-radius: 2px">
+      <div class="container">
+        <small style="color: white">&copy; 2021 | Andira Official</small>
+      </div>
+    </footer>
     <script>
-    function myFunction() {
+      function myFunction() {
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("more");
         var btnText = document.getElementById("myBtn");
         if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
         } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
         }
-    }
-    var mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
       }
-    }
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>
-    </body>
+  </body>
 </html>
